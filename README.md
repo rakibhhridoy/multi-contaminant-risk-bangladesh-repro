@@ -1,9 +1,9 @@
-# Reproducibility bundle — Hasan et al., *Cumulative multi-contaminant groundwater exposure in Bangladesh*
+# Hasan et al. — *Cumulative multi-contaminant groundwater exposure in Bangladesh*
 
-Complete analysis code and data for the manuscript submitted to *Science of the Total Environment* (2026). Running `bash run_all.sh` on a clean install reproduces every numerical claim, every supplementary table, and every figure panel in the paper.
+Complete analysis code and data for the manuscript submitted to *Science of the Total Environment* (2026). Running `bash run_all.sh` on a clean install regenerates every numerical claim, every supplementary table, and every figure panel in the paper.
 
-- **Code repository:** https://github.com/rakibhhridoy/multi-contaminant-risk-bangladesh
-- **Data archive (this bundle + large rasters):** Zenodo, DOI to be minted at acceptance
+- **Code repository:** https://github.com/rakibhhridoy/multi-contaminant-risk-bangladesh-repro
+- **Data archive (large CMIP6/GRACE rasters):** Zenodo, DOI to be minted at acceptance
 - **Original sample dataset:** Zenodo, DOI [10.5281/zenodo.19148957](https://doi.org/10.5281/zenodo.19148957)
 
 ---
@@ -11,8 +11,8 @@ Complete analysis code and data for the manuscript submitted to *Science of the 
 ## 1. Quick start
 
 ```bash
-git clone https://github.com/rakibhhridoy/multi-contaminant-risk-bangladesh.git
-cd multi-contaminant-risk-bangladesh
+git clone https://github.com/rakibhhridoy/multi-contaminant-risk-bangladesh-repro.git
+cd multi-contaminant-risk-bangladesh-repro
 
 # Python 3.11+ recommended
 python3 -m venv .venv && source .venv/bin/activate
@@ -31,10 +31,10 @@ A pre-computed copy of `output/tables/` is shipped with this bundle so that figu
 
 ---
 
-## 2. Bundle layout
+## 2. Repository layout
 
 ```
-reproducibility/
+multi-contaminant-risk-bangladesh-repro/
 ├── README.md                  ← this file
 ├── LICENSE                    ← MIT
 ├── requirements.txt           ← pinned Python dependencies
