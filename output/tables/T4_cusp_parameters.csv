@@ -1,0 +1,4 @@
+system,state_var,normal_factor,splitting_factor,n_samples,a0,a1,b0_normal,b1_normal,c0_splitting,c1_splitting,pseudo_r2,eq_rmse
+As × ORP × PO₄,As,ORP,PO43-,1673,-0.475,1.148,2.9651,0.0966,0.3049,0.0107,0.8216,1.5903
+As × ORP × Fe²⁺,As,ORP,Fe2+,1673,-0.4749,1.1481,2.9607,0.0941,0.302,0.0415,0.8217,1.5902
+As × Depth × PO₄,As,Depth,PO43-,1673,-0.4625,1.1497,2.9385,-0.171,0.2564,0.0133,0.8225,1.588

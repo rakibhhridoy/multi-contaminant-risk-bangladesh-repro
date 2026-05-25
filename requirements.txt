@@ -1,0 +1,24 @@
+# Reproducibility bundle for Hasan et al., "Cumulative multi-contaminant
+# groundwater exposure in Bangladesh" (Sci. Total Environ., submitted).
+#
+# Pinned to the versions used to generate the manuscript numbers
+# (Python 3.11+ recommended). Newer minor versions of these packages will
+# generally also work.
+
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.8.0
+matplotlib==3.10.9
+seaborn==0.13.2
+xarray==2026.4.0
+rasterio==1.4.4
+netCDF4==1.7.4
+Pillow==12.2.0
+
+# Required only by scripts/t5_bayesian/bayesian_propagation.py (Sobol sensitivity)
+SALib>=1.4.7
+
+# Required only by scripts/figures/{create_new_panels,create_t2_panels,
+# regenerate_panels_v2}.py (district choropleth maps)
+geopandas>=0.14

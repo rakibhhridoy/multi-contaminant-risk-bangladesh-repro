@@ -1,0 +1,163 @@
+/* DATA DESCRIPTION:
+Citation:	Ayers, John C; Goodbred, Steven; George, Gregory; Fry, David; Hornberger, George; Roy, Kushal; Rezaul, Karim; Akter, Farjana (2017): (Table 3) Chemical composition of water samples from the shallow aquifer in southwest Bangladesh [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.874439, 
+	In supplement to: Ayers, John C; Goodbred, Steven; George, Gregory; Fry, David; Benneyworth, Laura; Hornberger, George; Roy, Kushal; Rezaul, Karim; Akter, Farjana (2016): Sources of salinity and arsenic in groundwater in southwest Bangladesh. Geochemical Transactions, 17(1), https://doi.org/10.1186/s12932-016-0036-6
+Further details:	Google Earth kmz file and an ESRI ArcGIS map package for the samples used in Ayers etal., 2016 (URI: https://store.pangaea.de/Publications/Ayers-etal_2016/2017AyersBangladeshGW_KML.zip)
+Coverage:	MEDIAN LATITUDE: 22.493807 * MEDIAN LONGITUDE: 89.468839 * SOUTH-BOUND LATITUDE: 22.427377 * WEST-BOUND LONGITUDE: 89.433679 * NORTH-BOUND LATITUDE: 22.548009 * EAST-BOUND LONGITUDE: 89.501372
+	DATE/TIME START: 2012-05-14T00:00:00 * DATE/TIME END: 2013-10-27T00:00:00
+	MINIMUM DEPTH, sediment/rock: 15.2 m * MAXIMUM DEPTH, sediment/rock: 51.8 m
+Event(s):	Sundarbans_1988_GW-38 * LATITUDE: 22.433234 * LONGITUDE: 89.451616 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_1997_GW-52 * LATITUDE: 22.436157 * LONGITUDE: 89.447852 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_1998_GW-15 * LATITUDE: 22.535337 * LONGITUDE: 89.489398 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2000_GW-25 * LATITUDE: 22.533457 * LONGITUDE: 89.501372 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2001_GW-23 * LATITUDE: 22.533570 * LONGITUDE: 89.500789 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2002_GW-12 * LATITUDE: 22.514292 * LONGITUDE: 89.447794 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2002_GW-14 * LATITUDE: 22.516726 * LONGITUDE: 89.495929 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2005_GW-40 * LATITUDE: 22.427377 * LONGITUDE: 89.450372 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2006_GW-39 * LATITUDE: 22.431459 * LONGITUDE: 89.451492 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2007_GW-31 * LATITUDE: 22.470316 * LONGITUDE: 89.458890 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2007_GW-37 * LATITUDE: 22.436386 * LONGITUDE: 89.447941 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2007_GW-41 * LATITUDE: 22.427838 * LONGITUDE: 89.450196 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2007_GW-42 * LATITUDE: 22.427842 * LONGITUDE: 89.450195 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2007_GW-50 * LATITUDE: 22.506940 * LONGITUDE: 89.472823 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2008_GW-30 * LATITUDE: 22.470326 * LONGITUDE: 89.459285 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2009_GW-29 * LATITUDE: 22.470449 * LONGITUDE: 89.459210 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2009_GW-34 * LATITUDE: 22.458742 * LONGITUDE: 89.448120 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2009_GW-35 * LATITUDE: 22.458901 * LONGITUDE: 89.448046 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-13 * LATITUDE: 22.525395 * LONGITUDE: 89.439263 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-19 * LATITUDE: 22.548009 * LONGITUDE: 89.481866 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-27 * LATITUDE: 22.509464 * LONGITUDE: 89.491230 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-28 * LATITUDE: 22.506702 * LONGITUDE: 89.490784 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-53 * LATITUDE: 22.439780 * LONGITUDE: 89.452841 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2010_GW-60 * LATITUDE: 22.519536 * LONGITUDE: 89.491771 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-10 * LATITUDE: 22.501484 * LONGITUDE: 89.433679 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-11 * LATITUDE: 22.545407 * LONGITUDE: 89.453158 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-16 * LATITUDE: 22.528396 * LONGITUDE: 89.482665 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-20 * LATITUDE: 22.546758 * LONGITUDE: 89.481554 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-21 * LATITUDE: 22.546448 * LONGITUDE: 89.483091 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-22 * LATITUDE: 22.533607 * LONGITUDE: 89.500686 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-24 * LATITUDE: 22.533520 * LONGITUDE: 89.501026 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-26 * LATITUDE: 22.508745 * LONGITUDE: 89.491193 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-32 * LATITUDE: 22.478750 * LONGITUDE: 89.460374 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-33 * LATITUDE: 22.459127 * LONGITUDE: 89.463171 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-36 * LATITUDE: 22.458214 * LONGITUDE: 89.445487 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-51 * LATITUDE: 22.507394 * LONGITUDE: 89.474373 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2011_GW-200 * LATITUDE: 22.545752 * LONGITUDE: 89.481743 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+	Sundarbans_2012_GW-17 * LATITUDE: 22.532843 * LONGITUDE: 89.484595 * LOCATION: Bangladesh * METHOD/DEVICE: Core drilling (CDRILL)
+Comment:	On 2017-05-15 it was noted that the parameter Chlorine had erroneously been named 'Chlorinity' in this table, this was corrected ('Chlorinity' replaced by 'Chlorine', same unit).
+Parameter(s):	Event label (Event) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	DEPTH, sediment/rock [m] (Depth sed) * GEOCODE * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	DATE/TIME (Date/Time) * GEOCODE * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	Temperature, water [°C] (Temp) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	Oxidation reduction (RedOx) potential [mV] (Eh) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	pH (pH) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	Conductivity [mS/cm] (Cond) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * COMMENT: specific
+	Aluminium [µg/l] (Al) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Arsenic [µg/l] (As) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Boron [µg/l] (B) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Barium 2+ [µg/l] (Ba2+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Calcium [mg/l] (Ca2+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Iron [mg/l] (Fe) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Potassium [mg/l] (K+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Lithium [µg/l] (Li) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Magnesium [mg/l] (Mg2+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Manganese [mg/l] (Mn) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Molybdenum [µg/l] (Mo) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Sodium [mg/l] (Na+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Phosphorus [µg/l] (P) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Sulfur [mg/l] (S) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Silicon [mg/l] (Si) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Strontium [mg/l] (Sr2+) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: HR-ICP-MS, Perkin-Elmer, Elan 6100
+	Fluorine [mg/l] (F) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D4327-03) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D4327-03.htm)
+	Chlorine [mg/l] (Cl) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+	Bromine [mg/l] (Br) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D4327-03) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D4327-03.htm)
+	Nitrate [µg/l] ([NO3]-) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D4327-03) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D4327-03.htm)
+	Bicarbonate ion [mg/l] ([HCO3]-) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D7573-09) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D7573-09.htm)
+	Carbon, inorganic, dissolved [mg/l] (DIC) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D7573-09) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D7573-09.htm)
+	Carbon, organic, dissolved [mg/l] (DOC) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * METHOD/DEVICE: ASTM International, (Standard D7573-09) (URI: https://www.astm.org/DATABASE.CART/HISTORICAL/D7573-09.htm)
+	Minerals (Minerals) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu) * COMMENT: saturated
+	Charge imbalance [%] (CIB) * PI: Ayers, John C (https://orcid.org/0000-0003-2737-4718, john.c.ayers@vanderbilt.edu)
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	2020 data points
+*/
+Event	Depth sed [m]	Date/Time	Temp [°C]	Eh [mV]	pH	Cond [mS/cm]	Al [µg/l]	As [µg/l]	B [µg/l]	Ba2+ [µg/l]	Ca2+ [mg/l]	Fe [mg/l]	K+ [mg/l]	Li [µg/l]	Mg2+ [mg/l]	Mn [mg/l]	Mo [µg/l]	Na+ [mg/l]	P [µg/l]	S [mg/l]	Si [mg/l]	Sr2+ [mg/l]	F [mg/l]	Cl [mg/l]	Br [mg/l]	[NO3]- [µg/l]	[HCO3]- [mg/l]	DIC [mg/l]	DOC [mg/l]	Minerals	CIB [%]
+Sundarbans_2011_GW-10	22.9	2012-05-14	31.9	181	6.60	5.56	13.149	176.419	748.45	55.98	80.600	1.76	41.4	9.506	78.4	0.079	11.480	1144.000	4010.2	1.500	23.8	0.7	4.5	1528							
+Sundarbans_2011_GW-10	22.9	2012-10-15	29.6	135	7.39	5.65		198.629	791.48	45.22	86.100	0.56	28.2	11.957	78.9	0.075	6.588	1099.000	3232.8	0.500	21.8	0.7		1521	4.9	178	841	189	47.0	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	0
+Sundarbans_2011_GW-11	36.6	2012-05-14	28.8	165	6.89	4.59	3.859	62.340	760.72	11.42	51.900	0.66	37.1	7.194	67.1	0.064	3.374	657.000	5801.9	1.100	26.6	0.5	4.8	898							
+Sundarbans_2011_GW-11	36.6	2013-05-04	28.9	99	6.90	4.18		26.640	972.26	9.69	52.400	1.00	22.8	168.111	65.3	0.061	6.760	594.000	5400.0	15.500	11.1	0.8	0.4	859	8.0		1165	296	34.3	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	-18
+Sundarbans_2002_GW-12		2012-05-15	33.9	179	6.59	4.95	22.239	195.523	515.23	57.11	117.000	1.02	35.2	10.263	88.6	0.070	2.938	724.000	1742.2	1.800	23.2	1.0	5.1	1036	1.2						
+Sundarbans_2002_GW-12		2012-10-15	28.9	122	7.29	4.95	28.082	167.267	599.73	55.36	127.400	0.82	24.9	11.797	93.5	0.071		910.000	1681.9	0.500	22.7	1.0		1145	4.2	174	1028	237	49.4	Apatite, Dolomite, Quartz, Calcite	2
+Sundarbans_2002_GW-12		2013-05-04	27.5	-98	6.77	4.61		148.000	823.21	44.96	128.900	0.11	23.6	406.027	95.1	0.080	16.800	687.000	1092.6	33.200	9.2	1.7	0.4	1047	8.7		1051	284	30.8	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	-11
+Sundarbans_2002_GW-12		2013-10-24	27.9	-49	6.62	5.23	32.000	178.000	540.00	71.10	110.881	3.33	24.6	9.800	89.5	0.071		682.145	2466.0	5.160	23.2	0.9		1049	0.8	161	1193	364	45.0	Apatite, Hematite, Mt, Goethite, Quartz, Dolomite	-16
+Sundarbans_2010_GW-13	36.6	2012-05-16	31.1	135	6.47	15.23	48.994	20.117	564.06	255.57	388.200	0.75	107.3	16.144	412.8	0.299	1.972	4261.000	160.6	5.000	15.3	3.0	12.6	5966	11.1						
+Sundarbans_2002_GW-14	48.8	2012-05-17	29.2	103	6.48	3.30	16.840	61.767	439.91	8.54	106.500	0.12	20.0	10.189	70.5	0.149		392.000	1540.7	1.700	31.7	0.6	3.9	532							
+Sundarbans_1998_GW-15	25.9	2012-05-17	30.0	141	6.60	5.53	31.295	13.259	330.02	76.54	163.100	6.98	49.8	11.655	152.8	0.289	2.416	1251.000	1469.9	2.400	20.8	1.2	5.0	1741							
+Sundarbans_1998_GW-15	25.9	2012-10-16	28.2	102	7.43	5.62	48.002		417.07	84.06	184.100	6.15	37.6	10.058	158.7	0.302	2.147	856.000	1288.2	0.500	19.7	1.3		1321	5.4	174	540	125	17.5	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	12
+Sundarbans_2011_GW-16	19.8	2012-05-18	33.4	95	6.69	6.91	21.798	83.655	539.44	52.88	138.900	0.17	15.8	11.647	46.1	0.059	4.047	1388.000	969.6	13.000	23.5	0.5	6.1	2085	5.1						
+Sundarbans_2012_GW-17	15.2	2012-05-18	30.5	124	6.45	8.77	42.779	16.043	351.84	34.65	311.600	0.17	59.8	16.249	222.0	0.916	3.104	2134.000	84.2	124.900	16.0	1.5	7.3	3058	6.4						
+Sundarbans_2012_GW-17	15.2	2012-10-16	28.4	117	7.26	8.68	119.434	51.471	419.19	39.03	326.100	12.20	41.8	12.672	212.8	0.944	3.690	1346.000	810.5	122.000	14.3	1.5		2003	9.0	176	457	110	13.9	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	12
+Sundarbans_2012_GW-17	15.2	2013-05-07	28.2	-85	6.58	7.80		39.600	697.98	34.01	322.100	6.12	35.9	533.725	208.3	0.907	22.100	1518.000	878.2	145.500	2.2	2.3	0.5	2486	11.8		398	124	10.9	Hematite, Dolomite, Goethite, Calcite	6
+Sundarbans_2012_GW-17	15.2	2013-10-25	27.4	-36	6.46	8.50	59.600	37.500	357.50	36.10	265.549	14.51	41.8	23.700	198.7	0.896		1608.850	1390.0	92.812	17.2	1.4		2399	1.0	122	423	143	14.9	Apatite, Hematite, Mt, Goethite, Quartz	8
+Sundarbans_2010_GW-19	29.0	2012-05-19	28.4	141	6.56	8.01	21.697	20.685	871.67	15.25	124.200	0.24	16.3	10.767	89.2	0.167		1702.000	6777.8	3.100	32.3	0.5	6.2	2567	5.3						
+Sundarbans_2010_GW-19	29.0	2012-10-16	28.5	130	7.29	7.99	30.372	31.118	840.32	26.65	140.700	3.87	11.4	13.053	102.4	0.235	2.330	1565.000	7287.0	8.900	30.2	0.6		2186	8.1	174	598	140	32.9	Hematite, Apatite, Goethite, Dolomite, Quartz, Calcite	6
+Sundarbans_2010_GW-19	29.0	2013-05-06	27.5	-34	6.73	7.68		2.152	1229.40	19.52	136.400	0.87	8.9	44.977	94.4	0.185	5.150	1489.000	6062.6	27.800	17.5	0.6		2364	11.4	1610	583	168	25.8	Apatite, Hematite, Dolomite, Goethite, Quartz, Calcite	-2
+Sundarbans_2010_GW-19	29.0	2013-10-23	27.0	-37	6.49	8.22	42.000	4.000	847.00	24.32	124.859	4.47	12.2	13.400	101.9	0.230		1525.910	8893.4	13.327	31.8	0.6		2326	1.0	438	525	175	32.6	Apatite, Hematite, Mt, Quartz, Goethite	0
+Sundarbans_2011_GW-20	21.3	2012-05-19	30.1	117	6.67	7.90	24.407	13.242	639.91	14.42	150.300	0.65	20.7	11.433	78.6	0.102	2.064	1753.000	8693.2	2.600	31.5	0.7	7.0	2592	5.6						
+Sundarbans_2011_GW-20	21.3	2013-05-06	26.9	-73	6.84	7.56		3.968	931.11	13.36	161.200	0.19	12.6	385.642	82.8	0.114	15.200	1409.000	6237.6	35.500	18.0	1.3		2269	11.1		675	184	28.1	Apatite, Dolomite, Hematite, Quartz, Calcite	-3
+Sundarbans_2011_GW-200		2013-10-23	28.1	12	7.33	29.40	56.300	9.000	2258.00	74.34	192.061	0.21	38.1	17.500	382.4	0.177		7149.080	508.5	12.322	10.0	4.7		10363	3.6		472	126	34.2	Hematite, Mt, Goethite, Dolomite, Quartz	8
+Sundarbans_2011_GW-21	22.9	2012-05-19	30.2	129	6.54	7.30	31.768	26.108	460.98	13.17	202.900	0.55	34.3	13.477	117.3	0.565	2.545	1693.000	3321.1	65.200	28.2	0.9	6.0	2427	5.4						
+Sundarbans_2011_GW-22	41.8	2012-05-19	29.7	183	6.62	5.57	21.146	79.566	611.06	76.35	108.700	1.11	54.6	10.114	119.8	0.084		1057.000	1857.7	1.700	27.0	1.0	5.0	1436							
+Sundarbans_2001_GW-23	38.7	2012-05-19	28.7	161	6.71	5.14	14.114	66.880	660.64	48.61	93.000	0.25	54.3	9.909	108.4	0.078		861.000	1923.0	1.600	29.4	0.9	5.7	1150							
+Sundarbans_2011_GW-24	41.1	2012-05-19	28.0	147	6.66	6.87	28.438	93.911	625.19	86.10	146.700	0.91	61.6	10.778	151.2	0.079	1.980	1318.000	1506.5	2.100	26.1	1.3	5.9	1919							
+Sundarbans_2000_GW-25	42.1	2012-05-19	28.2	164	6.72	5.26	11.208	52.771	686.23	29.80	90.100	0.35	55.8	9.353	107.9	0.059		886.000	2230.3	1.500	28.0	0.9	5.1	1186	3.1						
+Sundarbans_2011_GW-26	42.7	2012-05-20	32.5	324	6.86	8.89	34.207	30.267	566.68	57.55	189.700	1.35	33.9	12.602	149.4	0.160	1.949	2138.000	63.9	3.300	21.9	1.1	7.3	3008							
+Sundarbans_2010_GW-27	45.7	2012-05-20	29.6	114	6.35	11.55	39.315	31.536	552.68	113.16	283.400	2.93	43.9	13.701	213.3	0.266	2.761	3009.000	602.7	4.300	22.0	1.5	9.4	4224	9.5						
+Sundarbans_2010_GW-27	45.7	2012-10-17	27.9	88	7.17	11.45	95.018	62.111	595.82	144.57	291.000	17.48	27.5	11.412	204.9	0.274		2039.000	2355.2	1.100	20.0	1.4		2722	12.2	186	828	204	41.2	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	12
+Sundarbans_2010_GW-28	22.9	2012-05-20	31.9	125	6.41	8.79	36.803	23.674	551.41	56.91	216.000	0.89	55.2	12.248	202.8	0.712		2237.000	175.1	3.000	22.5	1.5	7.4	3184	5.4						
+Sundarbans_2010_GW-28	22.9	2012-10-17	28.3	88	7.27	9.23	93.840	17.206	617.96	77.66	232.200	13.33	38.2	9.006	203.1	0.621	3.317	1586.000	2267.4	2.400	20.4	1.5		2366	9.6	182	715	171	29.0	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	9
+Sundarbans_2009_GW-29	36.6	2012-05-21	31.5	132	6.80	6.31	14.015		566.63	16.11	89.500	0.71	53.4	8.628	111.7	0.068	1.434	1342.000	1181.3	1.200	24.9	0.8	6.5	1920							
+Sundarbans_2009_GW-29	36.6	2012-10-19	27.3	94	7.70	6.54	26.636	31.907	649.53	20.29	103.500	2.08	39.2	12.463	123.6	0.074	3.738	1269.000	1466.0	0.200	24.2	0.9		1956	5.7	176	681	151	21.3	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	3
+Sundarbans_2009_GW-29	36.6	2013-05-05	26.6	-84	7.10	6.21		0.976	945.21	20.18	102.600	1.81	33.4	476.410	121.8	0.073	18.100	1190.000	1631.5	39.700	9.8	1.7		1836	9.8		766	186	15.6	Apatite, Hematite, Dolomite, Goethite, Quartz, Calcite	-2
+Sundarbans_2008_GW-30	36.6	2012-05-21	30.8	246	6.98	4.35		19.509	626.26	6.18	38.900	0.46	36.6	9.676	50.3	0.036	1.712	693.000	3044.1	0.700	25.0	0.4	4.4	987							
+Sundarbans_2008_GW-30	36.6	2012-10-19	27.3	90	7.91	4.56			715.49	6.02	44.500	0.39	26.4	10.489	54.4	0.039	2.533	1002.000	2875.2	0.400	25.0	0.4		1503	3.5	179	869	186	32.2	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	-6
+Sundarbans_2008_GW-30	36.6	2013-05-05	26.6	-42	7.37	4.30		1.000	945.15	10.13	47.400	1.01	25.2	533.912	56.7	0.041	20.000	666.000	2975.7	42.200	11.2	1.3		1009	8.1	1570	1014	225	24.8	Apatite, Hematite, Goethite, Dolomite, Quartz, Calcite	-15
+Sundarbans_2007_GW-31	44.2	2012-05-21	28.6	134	6.92	3.93		21.335	474.04	6.35	43.600	1.09	39.0	5.499	56.1	0.076	3.993	642.000	2283.7	0.700	25.3	0.4	4.3	899	1.2						
+Sundarbans_2007_GW-31	44.2	2012-10-19	27.6	81	7.82	4.05		23.130	577.75	6.64	52.800	1.01	29.3	9.675	65.1	0.092		839.000	2235.7	0.200	25.9	0.4		1078	3.1	179	778	168	25.7	Hematite, Apatite, Goethite, Dolomite, Quartz, Calcite	1
+Sundarbans_2007_GW-31	44.2	2013-05-05	26.6	-61	7.32	3.91		2.288	775.73	6.91	54.700	1.03	27.0	367.747	67.3	0.097	17.500	646.000	2092.4	32.500	12.7	1.1	0.4	937	7.9		872	197	16.8	Apatite, Hematite, Goethite, Dolomite, Quartz, Calcite	-10
+Sundarbans_2011_GW-32	45.7	2012-05-21	28.2	143	6.52	11.74	39.722	114.993	620.43	144.26	242.500	4.80	60.2	16.029	232.5	0.678	4.217	3085.000	1216.5	6.500	20.9	2.0	10.2	4344	8.8						
+Sundarbans_2011_GW-32	45.7	2013-05-06	27.7	-73	6.65	14.95		203.200	793.76	261.59	392.100	3.87	42.5	406.007	344.2	0.083	16.800	3387.000	1597.3	32.800	1.7	3.7		5311	20.0		556	169	16.4	Hematite, Dolomite, Goethite, Calcite	8
+Sundarbans_2011_GW-33	27.4	2012-05-22	28.2	143	6.37	10.74	51.491	27.236	579.12	39.87	337.100	2.67	97.4	11.850	416.0	0.891		2835.000	578.4	4.300	33.1	2.8	9.9	4034	8.8						
+Sundarbans_2011_GW-33	27.4	2013-05-08	28.1	-68	6.47	10.14		4.048	803.29	24.79	340.300	0.07	62.3	536.639	372.0	1.010	26.500	2136.000	771.8	43.300	17.6	3.2		3431	13.5		590	202	16.2	Dolomite, Quartz, Calcite	10
+Sundarbans_2011_GW-33	27.4	2013-10-22	27.5	8	6.42	11.30	54.680	38.100	627.40	39.79	324.563	10.82	72.0	27.640	392.4	1.218		2274.470	2185.0	14.382	32.6	0.3		3447	1.3	126		236	25.4	Apatite, Hematite, Mt, Goethite, Quartz	12
+Sundarbans_2009_GW-34	42.7	2012-05-22	29.1	153	6.59	5.53	15.319	154.272	518.09	54.45	107.800	0.23	32.6	10.957	85.5	0.085		1005.000	1878.1	1.500	25.1	0.8	5.9	1423	2.8						
+Sundarbans_2009_GW-34	42.7	2012-10-19	27.7	92	7.40	5.57	18.571	103.696	585.50	72.90	113.100	3.32	21.9	12.403	86.7	0.090	4.326	1050.000	3008.6	0.400	23.3	0.8		1553	4.7	176	928	210	40.7	Hematite, Apatite, Goethite, Dolomite, Quartz, Calcite	-2
+Sundarbans_2009_GW-34	42.7	2013-05-08	28.0	-77	6.71	5.24		107.200	887.77	61.97	120.000	2.14	21.1	32.028	92.5	0.095	2.520	925.000	4148.1	11.500	11.5	0.8		1348	9.0		874	250	23.2	Ap. Hematite, Dolomite, Goethite, Quartz, Calcite	-5
+Sundarbans_2009_GW-35	42.7	2012-05-22	29.3	128	6.59	7.67	31.658	253.617	487.26	93.98	176.700	0.63	36.4	11.325	136.4	0.077		1709.000	668.6	2.400	20.0	1.3	7.9	2419	6.5						
+Sundarbans_2009_GW-35	42.7	2012-10-19	27.9	88	7.42	7.39	41.528	225.816	558.09	115.93	177.800	3.54	24.1	12.611	130.1	0.082		1392.000	1748.3	0.400	19.4	1.3		2119	6.9	178	891	206	31.4	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	2
+Sundarbans_2009_GW-35	42.7	2013-05-08	29.2	-104	6.81	6.85		216.800	802.93	100.14	194.600	2.23	23.3	51.594	140.7	0.089	4.290	1327.000	2556.5	34.600	8.0	1.4		2020	10.6		899	245	18.4	Hematite, Dolomite, Goethite, Calcitecite, Quartz	0
+Sundarbans_2011_GW-36	41.1	2012-05-22	29.3	149	6.73	5.67	21.908	114.117	488.78	56.46	107.200	0.72	32.3	10.522	87.5	0.065	1.508	1040.000	2256.5	1.600	21.5	0.8	5.7	1403	0.8						
+Sundarbans_2011_GW-36	41.1	2012-10-19	28.5	94	7.52	5.66	24.354	116.270	558.40	60.74	114.500	1.36	22.1	11.700	90.1	0.068		1110.000	2300.9	0.400	19.6	0.8		1435	4.9	175	1009	226	44.9	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	2
+Sundarbans_2011_GW-36	41.1	2013-05-08	29.5	-83	6.87	5.18		76.560	735.32	55.69	123.500	1.60	22.6	450.442	97.5	0.080	16.600	832.000	2850.6	39.000	7.7	1.4		1319	8.9		1055	271	28.3	Apatite, Hematite, Dolomite, Goethite, Calcitecite, Quartz	-10
+Sundarbans_2007_GW-37	45.7	2012-05-22	31.6	170	6.51	4.80	23.336	157.895	285.99	37.00	125.900	0.17	34.5	12.015	97.9	0.084	1.677	855.000	1349.5	2.000	30.5	1.0	5.1	1202	1.1						
+Sundarbans_2007_GW-37	45.7	2013-05-05	26.9	-64	6.79	4.59		135.200	562.26	42.28	145.700	2.16	25.1	86.514	110.8	0.092	2.390	748.000	2795.3	12.100	16.7	1.3		1165	9.1		782	212	27.4	Apatite, Hematite, Dolomite, Goethite, Quartz, Calcite	-2
+Sundarbans_1988_GW-38	51.8	2012-05-22	28.1	128	6.80	5.70	6.550	78.043	613.27	10.31	65.600	0.61	40.5	9.145	77.9	0.044		1200.000	2436.2	1.300	29.0	0.7	6.0	1617	2.5						
+Sundarbans_1988_GW-38	51.8	2013-05-05	25.8	-58	7.08	5.54		57.200	873.31	13.50	78.100	0.83	32.2	211.487	94.0	0.047	4.630	989.000	2971.2	17.100	16.8	1.1		1492	9.5		826	198	24.0	Apatite, Hematite, Dolomite, Goethite, Quartz, Calcite	-4
+Sundarbans_1988_GW-38	51.8	2013-10-27	26.3	-78	6.89	6.13	22.000	93.400	720.00	13.10	59.764	2.93	29.9	3.800	83.4	0.051		1024.530	3763.0	3.115	29.5	0.7		1480	0.8	135	939	242	35.6	Apatite, Hematite, Mt, Goethite, Quartz, Dolomite	-6
+Sundarbans_2006_GW-39	42.7	2012-05-22	28.7	118	6.63	6.75	33.775	103.567	299.53	61.71	195.200	0.44	38.0	12.967	131.6	0.132		1490.000	573.6	2.700	21.7	1.4	6.2	2116	3.7						
+Sundarbans_2006_GW-39	42.7	2012-10-18	28.6	99	7.46	6.74	56.186	92.448	371.45	68.23	215.400	1.47	25.5	12.972	136.6	0.138		1126.000	851.4	0.300	20.2	1.5		1709	5.8	180	673	154	22.8	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	8
+Sundarbans_2006_GW-39	42.7	2013-05-05	25.4	-99	6.92	6.65		112.800	678.90	69.44	253.500	2.43	29.5	61.345	161.8	0.152	4.060	1279.000	2704.6	40.900	9.4	1.7		1938	9.8		679	180	15.7	Hematite, Dolomite, Goethite, Quartz, Calcite	7
+Sundarbans_2006_GW-39	42.7	2013-10-27	27.2	-81	6.73	7.24	48.600	131.000	372.90	78.65	189.923	5.74	26.1	22.600	136.3	0.143		1299.810	2409.0	8.754	21.3	1.5		1936	0.9	115	746	217	26.4	Apatite, Hematite, Mt, Goethite, Quartz, Dolomite	3
+Sundarbans_2005_GW-40	42.7	2012-05-23	29.7	149	6.55	7.04	40.687	47.691	391.53	72.43	248.500	0.91	46.2	11.907	160.0	0.238	1.701	1689.000	573.4	5.500	31.4	1.8	6.3	2249	4.5						
+Sundarbans_2005_GW-40	42.7	2012-10-18	29.1	107	7.34	6.83	81.764	48.116	445.19	95.62	271.900	4.04	33.0	16.668	162.5	0.245		1036.000	1470.0	0.300	30.2	1.9		1509	6.0	194	645	153	22.0	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	14
+Sundarbans_2005_GW-40	42.7	2013-05-05	26.1	-61	6.67	6.54		57.440	688.57	92.85	323.100	3.53	36.5	530.059	191.1	0.267	15.100	1335.000	2423.6	42.400	18.6	2.8		1980	9.9	1450	585	172	15.2	Hematite, Dolomite, Goethite, Quartz, Calcite	11
+Sundarbans_2007_GW-41	42.7	2012-05-23	29.3	134	6.56	7.94	46.356	29.808	251.41	139.56	352.700	1.39	43.0	13.873	186.7	0.266		1961.000	609.3	14.000	28.7	2.1	7.5	2757	4.9						
+Sundarbans_2007_GW-41	42.7	2012-10-18	29.2	110	7.36	7.94	129.485	63.801	337.09	137.54	364.400	7.37	29.6	15.555	181.0	0.278	4.620	1145.000	1510.4	7.900	27.5	2.1		1506	7.3	229	659	157	22.4	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	20
+Sundarbans_2007_GW-41	42.7	2013-05-05	26.3	-82	6.70	7.72		19.040	606.13	130.02	436.500	2.94	34.7	539.582	220.2	0.290	12.500	1582.000	2332.0	46.000	15.9	3.1		2410	10.9		578	172	15.0	Hematite, Dolomite, Quartz, Goethite, Calcite	12
+Sundarbans_2007_GW-42	42.7	2012-05-23	29.3	134	6.56	7.94	47.760	43.434	255.79	143.23	352.400	2.20	43.7	12.752	186.9	0.269		1910.000	743.4	14.000	29.0	2.2	6.6	2728							
+Sundarbans_2007_GW-50	33.5	2012-10-17	29.1	111	7.79	3.57		13.866	603.38	10.51	45.700	0.06	26.1	6.167	52.0	0.035	1.591	739.000	1537.2	0.400	24.3	0.4		1106	3.0	178	774	166	35.4	Apatite, Hematite, Goethite, Dolomite, Quartz, Calcite	-7
+Sundarbans_2007_GW-50	33.5	2013-05-07	28.9	22	7.18	3.12		8.160	964.54	6.42	38.500	0.25	33.2	62.142	51.4	0.037	9.350	460.000	2484.9	40.800	15.2	0.5		686	7.5		881	201	23.1	Apatite, Hematite, Goethite, Dolomite, Quartz, Calcite	-18
+Sundarbans_2011_GW-51	27.4	2012-10-17	28.3	99	7.69	4.00		30.846	784.70	6.81	47.200	0.65	24.1	9.821	50.5	0.046	2.045	902.000	3735.5	0.500	31.8	0.4		1339	2.9	178	1003	217	43.3	Hematite, Apatite, Goethite, Dolomite, Quartz, Calcite	-9
+Sundarbans_2011_GW-51	27.4	2013-05-07	29.8	33	7.08	3.68		5.352	1035.39	5.67	43.900	0.49	31.6	775.594	55.5	0.044	19.800	488.000	3337.8	46.500	20.6	1.2		746	7.6		1116	262	25.8	Apatite, Hematite, Goethite, Dolomite, Quartz, Calcite	-23
+Sundarbans_1997_GW-52	36.6	2012-10-18	27.6	121	7.39	5.81	51.567	205.611	370.97	60.50	183.700	2.66	29.3	14.793	132.9	0.084	5.536	967.000	1189.6	0.400	27.6	1.4		1281	5.8	178	826	190	41.3	Hematite, Apatite, Goethite, Dolomite, Calcitecite, Quartz	9
+Sundarbans_2010_GW-53	39.6	2012-10-17	27.8	122	7.24	9.01	107.962	27.516	455.41	55.84	280.200	6.95	26.0	17.236	237.6	0.303		1435.000	898.3	0.700	27.3	1.4		2101	8.5	182	739	182	29.2	Hematite, Apatite, Goethite, Dolomite, Quartz, Calcite	13
+Sundarbans_2010_GW-53	39.6	2013-05-05	25.4	-39	6.62	9.33		40.000	868.55	82.57	360.300	2.12	49.2	590.472	309.8	0.269	12.600	1916.000	1361.1	48.600	17.5	2.7	0.4	3017	12.4		641	203	21.1	Hematite, Dolomite, Quartz, Goethite, Calcite	10
+Sundarbans_2010_GW-60		2013-05-07	28.9	77	7.09	4.86			549.66	51.20	192.800	0.34	36.7	7245.380	147.1	0.484	7.840	940.000	920.2	138.200		1.1	0.4	1425	9.3		393	95	10.9	Hematite, Goethite, Dolomite, Calcite	6

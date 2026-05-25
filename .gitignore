@@ -1,0 +1,31 @@
+# macOS resource forks
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor / IDE
+.idea/
+.vscode/
+.ipynb_checkpoints/
+
+# Teaching notebook is distributed separately (not in this scripts repo)
+Notebook/
+
+# Bundle-generated outputs (re-created by running the scripts)
+output/figures/*
+!output/figures/.gitkeep
+# Tracked, computed result tables: kept in output/tables/ for reference
+
+# Large external rasters/granules (host on Zenodo; download into data/external/)
+# Pattern uses /* + !.gitkeep so the empty placeholder dirs survive git clone.
+data/external/cmip6/*
+!data/external/cmip6/.gitkeep
+data/external/grace_fo/*
+!data/external/grace_fo/.gitkeep
+# WorldPop raster and PANGAEA validation cohorts are small enough to ship
+!data/external/worldpop/
+!data/external/validation/

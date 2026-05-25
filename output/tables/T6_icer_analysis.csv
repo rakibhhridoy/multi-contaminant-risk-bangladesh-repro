@@ -1,0 +1,6 @@
+scenario,description,DALYs_averted,total_cost_usd,incremental_cost,incremental_dalys,ICER,on_frontier
+S5_fertilizer_policy,Reduce PO4 fertilizer 30% in high-As zones (indirect As reduction),9222210.041076973,50000000,50000000.0,9222210.041076973,5.421693908216493,True
+S4_seasonal_switch,Switch to deep wells during monsoon (wet season only),26011605.804593824,101000000,51000000.0,16789395.76351685,3.0376316526424594,True
+S2_po4_removal,PO4-removal sorbent at wellhead,29181873.64582248,151500000,50500000.0,3170267.8412286565,15.929253466618272,True
+S3_multi_treatment,Community-scale multi-contaminant treatment (Fe oxidation + As/Mn removal),52606279.371087916,808000000,656500000.0,23424405.725265436,28.026324667519855,True
+S1_deepen_wells,Deepen all shallow/intermediate wells to >150m,34513052.90649356,2525000000,,,,False
