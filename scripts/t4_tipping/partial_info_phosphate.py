@@ -87,8 +87,8 @@ def bootstrap_delta_auc(df, base_feats, full_feats, target, n_boot=N_BOOT):
         if sub[target].nunique() < 2:
             deltas[b] = np.nan
             continue
-        a_base, _ = cv_auc(sub, base_feats, target, n_splits=3, seed=b)
-        a_full, _ = cv_auc(sub, full_feats, target, n_splits=3, seed=b)
+        a_base, _ = cv_auc(sub, base_feats, target, n_splits=5, seed=b)
+        a_full, _ = cv_auc(sub, full_feats, target, n_splits=5, seed=b)
         deltas[b] = a_full - a_base
     return deltas
 
