@@ -840,19 +840,24 @@ def t4_f05_seasonal_shift(df):
     for c, label in zip(contams, contam_labels):
         if c not in df.columns:
             continue
+        # Fix the high-mode boundary ONCE on the pooled (all-season) data, then
+        # classify each season against that SAME model. Fitting a separate GMM
+        # per season makes the two seasons' "high mode" incomparable (each is
+        # relative to its own internal split) and produced spurious shifts.
+        allv = df[c].dropna(); allv = allv[allv > 0]
+        if len(allv) < 40:
+            continue
+        gmm = GaussianMixture(n_components=2, random_state=42)
+        gmm.fit(np.log10(allv.values + 0.01).reshape(-1, 1))
+        hi_comp = int(np.argmax(gmm.means_.flatten()))   # higher-mean component
         for season, store in [('Dry', dry_pct), ('Wet', wet_pct)]:
             sub = df[df['Season'] == season][c].dropna()
             sub = sub[sub > 0]
             if len(sub) < 20:
                 store.append(0)
                 continue
-            log_v = np.log10(sub.values + 0.01)
-            gmm = GaussianMixture(n_components=2, random_state=42)
-            gmm.fit(log_v.reshape(-1, 1))
-            labels = gmm.predict(log_v.reshape(-1, 1))
-            if gmm.means_.flatten()[0] > gmm.means_.flatten()[1]:
-                labels = 1 - labels
-            store.append(labels.mean() * 100)
+            labels = gmm.predict(np.log10(sub.values + 0.01).reshape(-1, 1))
+            store.append((labels == hi_comp).mean() * 100)
         valid_labels.append(label)
 
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
