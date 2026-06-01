@@ -84,19 +84,19 @@ def set_lancet_style():
     plt.rcParams.update({
         'font.family': 'serif',
         'font.serif': ['Times New Roman', 'DejaVu Serif', 'serif'],
-        'font.size': 13,
-        'axes.titlesize': 15,
+        'font.size': 17,
+        'axes.titlesize': 20,
         'axes.titleweight': 'bold',
-        'axes.labelsize': 14,
+        'axes.labelsize': 19,
         'axes.labelweight': 'normal',
-        'axes.linewidth': 0.8,
+        'axes.linewidth': 1.0,
         'axes.spines.top': False,
         'axes.spines.right': False,
-        'xtick.labelsize': 12,
-        'ytick.labelsize': 12,
-        'xtick.major.width': 0.8,
-        'ytick.major.width': 0.8,
-        'legend.fontsize': 11,
+        'xtick.labelsize': 16,
+        'ytick.labelsize': 16,
+        'xtick.major.width': 1.0,
+        'ytick.major.width': 1.0,
+        'legend.fontsize': 15,
         'legend.framealpha': 0.95,
         'legend.edgecolor': '#CCCCCC',
         'figure.dpi': 150,
@@ -208,6 +208,57 @@ def add_bd_boundary(ax):
     ax.set_aspect('equal')
 
 
+def idw_clipped_surface(fig, ax, lon, lat, vals, *, cmap, vmin, vmax, label,
+                        extend='neither', n=260, k=10, p=2):
+    """Smooth inverse-distance (k-NN, power p) surface over the national bbox,
+    clipped to the Bangladesh admin polygon and drawn beneath a crisp boundary
+    outline. Matches the IDW (k=10, p=2) interpolator used for the gridded DALY
+    surface (Supplementary Fig. S9). Deterministic."""
+    import os
+    os.environ['SHAPE_RESTORE_SHX'] = 'YES'
+    import geopandas as gpd
+    from scipy.spatial import cKDTree
+
+    bb = BANGLADESH_BBOX
+    lon = np.asarray(lon, float); lat = np.asarray(lat, float); vals = np.asarray(vals, float)
+    m = np.isfinite(lon) & np.isfinite(lat) & np.isfinite(vals)
+    lon, lat, vals = lon[m], lat[m], vals[m]
+
+    gx = np.linspace(bb['lon_min'], bb['lon_max'], n)
+    gy = np.linspace(bb['lat_min'], bb['lat_max'], n)
+    GX, GY = np.meshgrid(gx, gy)
+
+    tree = cKDTree(np.c_[lon, lat])
+    d, idx = tree.query(np.c_[GX.ravel(), GY.ravel()], k=min(k, len(lon)))
+    d = np.maximum(d, 1e-12)
+    w = 1.0 / d ** p
+    Z = (w * vals[idx]).sum(1) / w.sum(1)
+    Z = Z.reshape(GX.shape)
+
+    bd = gpd.read_file(BD_SHP)
+    geom = bd.unary_union
+    try:
+        import shapely.vectorized as sv
+        inside = sv.contains(geom, GX, GY)
+    except Exception:
+        from matplotlib.path import Path as MplPath
+        polys = list(geom.geoms) if geom.geom_type == 'MultiPolygon' else [geom]
+        pts = np.c_[GX.ravel(), GY.ravel()]
+        inside = np.zeros(GX.ravel().shape, bool)
+        for poly in polys:
+            inside |= MplPath(np.asarray(poly.exterior.coords)).contains_points(pts)
+        inside = inside.reshape(GX.shape)
+    Z = np.where(inside, Z, np.nan)
+
+    im = ax.imshow(Z, extent=(bb['lon_min'], bb['lon_max'], bb['lat_min'], bb['lat_max']),
+                   origin='lower', cmap=cmap, vmin=vmin, vmax=vmax, zorder=2,
+                   interpolation='bilinear', aspect='equal')
+    bd.boundary.plot(ax=ax, color='#333333', linewidth=1.0, zorder=3)
+    cb = fig.colorbar(im, ax=ax, shrink=0.55, pad=0.02, extend=extend)
+    cb.set_label(label)
+    return im
+
+
 # ═════════════════════════════════════════════════════════════════════════════
 # FIGURE 2 — T2 PANELS (Multi-Contaminant Health Risk)
 # ═════════════════════════════════════════════════════════════════════════════
@@ -241,13 +292,13 @@ def t2_f01_hi_heatmap(df):
                     linewidths=0.8, linecolor='white',
                     cbar_kws={'label': 'HI (median)', 'shrink': 0.8},
                     annot_kws={'fontsize': 10, 'fontweight': 'bold'})
-        axes[i].set_xticklabels(xlabels, rotation=0, fontsize=10)
-        axes[i].set_yticklabels(ylabels, rotation=0, fontsize=10)
+        axes[i].set_xticklabels(xlabels, rotation=0, fontsize=14)
+        axes[i].set_yticklabels(ylabels, rotation=0, fontsize=14)
         axes[i].set_xlabel('')
         axes[i].set_ylabel('')
         # Season label instead of title
         axes[i].text(0.5, 1.02, f'{season} season', transform=axes[i].transAxes,
-                     ha='center', fontsize=12, fontweight='bold', color=DARKTEXT)
+                     ha='center', fontsize=16, fontweight='bold', color=DARKTEXT)
 
     fig.tight_layout(w_pad=1.5)
     save_panel(fig, 'T2_F01_HI_heatmap_season.png')
@@ -270,8 +321,8 @@ def t2_f02_single_vs_multi(df):
     ax.set_xlabel('As-only HI')
     ax.set_ylabel('Multi-contaminant HI')
     ax.text(0.05, 0.93, 'Non-carcinogenic', transform=ax.transAxes,
-            fontsize=11, fontweight='bold', color=DARKTEXT)
-    ax.legend(loc='lower right', fontsize=11)
+            fontsize=15, fontweight='bold', color=DARKTEXT)
+    ax.legend(loc='lower right', fontsize=15)
 
     # CR comparison
     ax = axes[1]
@@ -284,8 +335,8 @@ def t2_f02_single_vs_multi(df):
     ax.set_xlabel('As-only CR')
     ax.set_ylabel('Multi-contaminant CR')
     ax.text(0.05, 0.93, 'Carcinogenic', transform=ax.transAxes,
-            fontsize=11, fontweight='bold', color=DARKTEXT)
-    ax.legend(loc='lower right', fontsize=11)
+            fontsize=15, fontweight='bold', color=DARKTEXT)
+    ax.legend(loc='lower right', fontsize=15)
 
     fig.tight_layout(w_pad=2.0)
     save_panel(fig, 'T2_F02_single_vs_multi.png')
@@ -318,7 +369,7 @@ def t2_f03_contributions(df):
     # Add % labels
     for bar, val in zip(bars, vals):
         ax.text(bar.get_width() + 0.8, bar.get_y() + bar.get_height()/2,
-                f'{val:.1f}%', va='center', fontsize=10, fontweight='bold', color=DARKTEXT)
+                f'{val:.1f}%', va='center', fontsize=14, fontweight='bold', color=DARKTEXT)
 
     ax.set_yticks(y_pos)
     ax.set_yticklabels(display_names)
@@ -367,9 +418,9 @@ def t2_f04_age_groups(df):
 
     ax.axhline(1, color=CRIMSON, ls='--', lw=1.5, alpha=0.7, label='HI = 1')
     ax.set_xticks(range(1, len(age_labels) + 1))
-    ax.set_xticklabels(age_labels, fontsize=10)
+    ax.set_xticklabels(age_labels, fontsize=14)
     ax.set_ylabel('Cumulative Hazard Index')
-    ax.legend(loc='upper right', fontsize=11)
+    ax.legend(loc='upper right', fontsize=15)
 
     fig.tight_layout()
     save_panel(fig, 'T2_F04_age_group_comparison.png')
@@ -439,7 +490,7 @@ def t2_f05f06_daly_merged(df):
     ax2.set_yticklabels(labels)
     ax2.set_xlabel('Annual DALYs per 100,000')
     ax2.invert_yaxis()
-    ax2.legend(loc='lower right', fontsize=10, frameon=False)
+    ax2.legend(loc='lower right', fontsize=14, frameon=False)
 
     fig.tight_layout(w_pad=2.0)
     save_panel(fig, 'T2_F05F06_merged.png')
@@ -463,27 +514,12 @@ def t2_spatial_risk(df):
                           facecolor='none', linestyle='--', alpha=0.35)
         ax.add_patch(rect)
 
-    # HI categories with distinct markers for each
-    hi_cats = pd.cut(dff['HI'], bins=[0, 1, 2, 5, 10, np.inf],
-                     labels=['<1', '1–2', '2–5', '5–10', '>10'])
-    cat_styles = {
-        '<1':   ('#2E7D32', 'o', 12),
-        '1–2':  ('#F9A825', 'o', 14),
-        '2–5':  (AMBER,     's', 14),
-        '5–10': (CRIMSON,   'D', 16),
-        '>10':  ('#4A148C',  '^', 18),
-    }
-
-    for cat, (color, marker, size) in cat_styles.items():
-        mask = hi_cats == cat
-        if mask.sum() > 0:
-            ax.scatter(dff.loc[mask, 'Longitude'], dff.loc[mask, 'Latitude'],
-                       c=color, marker=marker, s=size, alpha=0.65, edgecolors='none',
-                       label=f'{cat} (n={mask.sum()})', zorder=3)
-
-    ax.legend(title='HI', loc='upper right', fontsize=10, title_fontsize=11,
-              framealpha=0.95, markerscale=1.3, labelspacing=0.4,
-              bbox_to_anchor=(1.0, 1.0))
+    # Smooth IDW surface of the hazard index, clipped to the country (no gaps).
+    # vmax capped so a few extreme wells don't wash out the gradient.
+    m = dff[['Longitude', 'Latitude', 'HI']].dropna()
+    idw_clipped_surface(fig, ax, m['Longitude'].values, m['Latitude'].values,
+                        m['HI'].values, cmap='RdYlGn_r', vmin=0, vmax=5,
+                        label='Hazard index (HI)', extend='max')
 
     fig.tight_layout()
     save_panel(fig, 'T2_spatial_risk_map.png')
@@ -510,14 +546,14 @@ def t4_f01_gmm_densities(df):
         ax = axes_flat[idx]
         if contam not in df.columns:
             ax.text(0.5, 0.5, f'{label}\nNo data', ha='center', va='center',
-                    transform=ax.transAxes, fontsize=12, color=SLATE)
+                    transform=ax.transAxes, fontsize=16, color=SLATE)
             continue
 
         vals = df[contam].dropna().values
         vals = vals[vals > 0]
         if len(vals) < 20:
             ax.text(0.5, 0.5, f'{label}\nn < 20', ha='center', va='center',
-                    transform=ax.transAxes, fontsize=12, color=SLATE)
+                    transform=ax.transAxes, fontsize=16, color=SLATE)
             continue
         log_vals = np.log10(vals + 0.01)
 
@@ -549,7 +585,7 @@ def t4_f01_gmm_densities(df):
             saddle_x = saddle_range[np.argmin(saddle_densities)]
             ax.axvline(saddle_x, color=color, ls=':', lw=1.5, alpha=0.6)
             ax.text(saddle_x, ax.get_ylim()[1] * 0.9, f'{10**saddle_x:.1f}',
-                    ha='center', fontsize=11, color=color, fontweight='bold')
+                    ha='center', fontsize=15, color=color, fontweight='bold')
 
         # Use mathtext for log₁₀ to avoid box glyphs
         ax.set_xlabel(r'$\log_{10}$' + f'({label})')
@@ -599,7 +635,7 @@ def t4_f02_phase_diagrams(df):
 
         ax.set_xlabel(xvar.replace('PO43-', r'PO$_4$ (mg/L)').replace('ORP', 'ORP (mV)').replace('Depth', 'Depth (m)'))
         ax.set_ylabel(yvar.replace('Fe2+', r'Fe$^{2+}$ (mg/L)').replace('ORP', 'ORP (mV)'))
-        ax.legend(loc='best', fontsize=11, markerscale=1.5)
+        ax.legend(loc='best', fontsize=15, markerscale=1.5)
 
     fig.tight_layout(w_pad=2.0)
     save_panel(fig, 'T4_F02_phase_diagrams.png')
@@ -681,7 +717,7 @@ def t4_f03_cascade_heatmap(df):
                     sig = '*'
             txt_color = 'white' if val > 0.4 else DARKTEXT
             ax.text(j, i, f'{val:.2f}{sig}', ha='center', va='center',
-                    fontsize=10, fontweight='bold', color=txt_color)
+                    fontsize=14, fontweight='bold', color=txt_color)
 
     ax.set_xticks(range(n))
     ax.set_yticks(range(n))
@@ -691,7 +727,7 @@ def t4_f03_cascade_heatmap(df):
     ax.set_ylabel('Trigger (i = high mode)')
 
     cbar = plt.colorbar(im, ax=ax, shrink=0.8)
-    cbar.set_label('P(j = high | i = high)', fontsize=10)
+    cbar.set_label('P(j = high | i = high)', fontsize=14)
 
     fig.tight_layout()
     save_panel(fig, 'T4_F03_cascade_heatmap.png')
@@ -750,8 +786,8 @@ def t4_f04_cusp_surface(df):
     ax1.set_xlabel(r'log$_{10}$ As (µg/L)')
     ax1.set_ylabel('Effective potential $V$ (a.u.)')
     ax1.set_title('Empirical potential by phosphate regime',
-                  fontsize=11, fontweight='bold', color=DARKTEXT)
-    ax1.legend(loc='upper right', fontsize=9, frameon=False)
+                  fontsize=15, fontweight='bold', color=DARKTEXT)
+    ax1.legend(loc='upper right', fontsize=13, frameon=False)
 
     # ─── Panel B: variance + autocorrelation EWS ───────────────────────
     ax2 = axes[1]
@@ -778,13 +814,13 @@ def t4_f04_cusp_surface(df):
     ax2.set_ylabel('Variance of log As', color=CRIMSON)
     ax2_r.set_ylabel('Lag-1 autocorrelation', color=STEEL)
     ax2.set_title('Early-warning signals along PO$_4$ axis',
-                  fontsize=11, fontweight='bold', color=DARKTEXT)
+                  fontsize=15, fontweight='bold', color=DARKTEXT)
     ax2.tick_params(axis='y', labelcolor=CRIMSON)
     ax2_r.tick_params(axis='y', labelcolor=STEEL)
     lines1, labels1 = ax2.get_legend_handles_labels()
     lines2, labels2 = ax2_r.get_legend_handles_labels()
-    ax2.legend(lines1 + lines2, labels1 + labels2, loc='upper left',
-               fontsize=9, frameon=False)
+    ax2.legend(lines1 + lines2, labels1 + labels2, loc='lower left',
+               fontsize=13, frameon=False)
 
     fig.tight_layout(w_pad=2.0)
     save_panel(fig, 'T4_F04_cusp_surface.png')
@@ -830,7 +866,7 @@ def t4_f05_seasonal_shift(df):
     ax.set_xticks(x)
     ax.set_xticklabels(valid_labels)
     ax.set_ylabel('High-mode membership (%)')
-    ax.legend(loc='upper right', fontsize=11)
+    ax.legend(loc='upper right', fontsize=15)
 
     # Right: shift (wet - dry)
     ax = axes[1]
@@ -839,7 +875,7 @@ def t4_f05_seasonal_shift(df):
     ax.bar(x, shifts, color=colors, edgecolor='white', width=0.55)
     for i, (xi, s) in enumerate(zip(x, shifts)):
         ax.text(xi, s + (0.3 if s >= 0 else -0.3),
-                f'{s:+.1f}pp', ha='center', fontsize=11, fontweight='bold',
+                f'{s:+.1f}pp', ha='center', fontsize=15, fontweight='bold',
                 va='bottom' if s >= 0 else 'top')
     ax.axhline(0, color='#333', lw=0.8)
     ax.set_xticks(x)
@@ -867,16 +903,12 @@ def t4_f06_spatial_tipping(df):
     fig, ax = plt.subplots(1, 1, figsize=(6, 7))
     add_bd_boundary(ax)
 
-    # Low mode — circles
-    low = dff[dff['as_mode'] == 0]
-    ax.scatter(low['Longitude'], low['Latitude'], c=TEAL, marker='o', s=10,
-               alpha=0.45, edgecolors='none', label=f'Low-As (n={len(low)})', zorder=3)
-    # High mode — diamonds
-    high = dff[dff['as_mode'] == 1]
-    ax.scatter(high['Longitude'], high['Latitude'], c=CRIMSON, marker='D', s=16,
-               alpha=0.65, edgecolors='none', label=f'High-As (n={len(high)})', zorder=4)
-
-    ax.legend(loc='upper right', fontsize=11, markerscale=1.5, framealpha=0.95)
+    # Smooth IDW surface of the high-As-mode fraction (mean of the binary GMM
+    # label), clipped to the country. Diverging map: blue = low-As, red = high-As.
+    m = dff[['Longitude', 'Latitude', 'as_mode']].dropna()
+    idw_clipped_surface(fig, ax, m['Longitude'].values, m['Latitude'].values,
+                        m['as_mode'].values.astype(float), cmap='coolwarm',
+                        vmin=0, vmax=1, label='Fraction in high-As mode')
 
     fig.tight_layout()
     save_panel(fig, 'T4_F06_spatial_tipping.png')
@@ -921,13 +953,13 @@ def t1_f01_seasonal_sensitivity(df):
                     linewidths=0.8, linecolor='white',
                     annot_kws={'fontsize': 9},
                     cbar_kws={'shrink': 0.8})
-        ax.set_yticklabels(ylabels, rotation=0, fontsize=10)
+        ax.set_yticklabels(ylabels, rotation=0, fontsize=14)
         ax.set_xlabel('')
         ax.set_ylabel('')
 
         label = r'$\Delta$ Concentration (%)' if i == 0 else 'Sensitivity (S per %)'
         ax.text(0.5, 1.02, label, transform=ax.transAxes,
-                ha='center', fontsize=11, fontweight='bold', color=DARKTEXT)
+                ha='center', fontsize=15, fontweight='bold', color=DARKTEXT)
 
     fig.tight_layout(w_pad=1.5)
     save_panel(fig, 'T1_F01_seasonal_sensitivity.png')
@@ -1018,12 +1050,12 @@ def t1_f03_zone_vulnerability():
                     linewidths=0.8, linecolor='white',
                     annot_kws={'fontsize': 9, 'fontweight': 'bold'},
                     cbar_kws={'shrink': 0.8, 'label': 'Change (%)'})
-        ax.set_yticklabels(ylabels, rotation=0, fontsize=10)
+        ax.set_yticklabels(ylabels, rotation=0, fontsize=14)
         ax.set_xlabel('')
         ax.set_ylabel('')
         ssp_label = 'SSP2-4.5' if '245' in ssp else 'SSP5-8.5'
         ax.text(0.5, 1.02, ssp_label, transform=ax.transAxes,
-                ha='center', fontsize=12, fontweight='bold', color=DARKTEXT)
+                ha='center', fontsize=16, fontweight='bold', color=DARKTEXT)
 
     fig.tight_layout(w_pad=1.5)
     save_panel(fig, 'T1_F03_zone_vulnerability.png')
@@ -1063,12 +1095,12 @@ def t1_f04_threshold_crossings():
                     edgecolor='white', width=0.55)
     for b, v in zip(bars, vals):
         ax1.text(b.get_x() + b.get_width()/2, b.get_height() + 0.05,
-                 str(int(v)), ha='center', fontsize=12, fontweight='bold',
+                 str(int(v)), ha='center', fontsize=16, fontweight='bold',
                  color=DARKTEXT)
     ax1.set_ylabel('Zone-depth cells newly crossing\nWHO 10 µg/L arsenic')
     ax1.set_ylim(0, max(vals) + 1.2 if max(vals) > 0 else 2)
     ax1.text(0.5, 1.02, 'New WHO arsenic exceedances by 2050',
-             transform=ax1.transAxes, ha='center', fontsize=11,
+             transform=ax1.transAxes, ha='center', fontsize=15,
              fontweight='bold', color=DARKTEXT)
 
     # ─── Panel B: Absolute As change in top-5 high-burden zones (SSP5-8.5) ───
@@ -1084,15 +1116,15 @@ def t1_f04_threshold_crossings():
     ax2.barh(y, proj - base, left=base, color=CRIMSON, alpha=0.9,
              label='Projected increase by 2050 (SSP5-8.5)')
     ax2.axvline(10, color='#222', ls='--', lw=1.2, alpha=0.7)
-    ax2.text(10.4, len(labels) - 0.4, 'WHO 10 µg/L', fontsize=9,
+    ax2.text(10.4, len(labels) - 0.4, 'WHO 10 µg/L', fontsize=13,
              color='#222', style='italic')
     ax2.set_yticks(y)
-    ax2.set_yticklabels(labels, fontsize=9)
+    ax2.set_yticklabels(labels, fontsize=13)
     ax2.invert_yaxis()
     ax2.set_xlabel('Arsenic concentration (µg/L)')
-    ax2.legend(loc='lower right', fontsize=9, frameon=False)
+    ax2.legend(loc='lower right', fontsize=13, frameon=False)
     ax2.text(0.5, 1.02, 'Largest absolute As increases (SSP5-8.5)',
-             transform=ax2.transAxes, ha='center', fontsize=11,
+             transform=ax2.transAxes, ha='center', fontsize=15,
              fontweight='bold', color=DARKTEXT)
 
     fig.tight_layout(w_pad=2.0)
@@ -1164,25 +1196,25 @@ def t1_f05_contaminant_change_bar():
 
     bars1 = ax.bar(x - w/2, changes_245, w, color=colors_245, edgecolor='white',
                     label='SSP2-4.5', yerr=yerr_245,
-                    error_kw=dict(ecolor='#333', capsize=3, lw=1.0))
+                    error_kw=dict(ecolor='#333', capsize=3, lw=1.0, alpha=0.3))
     bars2 = ax.bar(x + w/2, changes_585, w, color=colors_585, edgecolor='white',
                     label='SSP5-8.5', yerr=yerr_585,
-                    error_kw=dict(ecolor='#333', capsize=3, lw=1.0))
+                    error_kw=dict(ecolor='#333', capsize=3, lw=1.0, alpha=0.3))
 
     for bar, val in zip(bars1, changes_245):
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height(),
                 f'{val:+.0f}%', ha='center', va='bottom' if val > 0 else 'top',
-                fontsize=11, fontweight='bold')
+                fontsize=15, fontweight='bold')
     for bar, val in zip(bars2, changes_585):
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height(),
                 f'{val:+.0f}%', ha='center', va='bottom' if val > 0 else 'top',
-                fontsize=11, fontweight='bold')
+                fontsize=15, fontweight='bold')
 
     ax.axhline(0, color='#333', linewidth=0.8)
     ax.set_xticks(x)
-    ax.set_xticklabels(valid_labels, fontsize=12)
+    ax.set_xticklabels(valid_labels, fontsize=16)
     ax.set_ylabel('Concentration change (%)')
-    ax.legend(loc='upper right', fontsize=11)
+    ax.legend(loc='upper right', fontsize=15)
 
     fig.tight_layout()
     save_panel(fig, 'T1_F05_contaminant_change_bar.png')
@@ -1217,26 +1249,14 @@ def t1_f06_spatial_vulnerability(df):
     fig, ax = plt.subplots(1, 1, figsize=(6, 7))
     add_bd_boundary(ax)
 
-    vq = dff['vulnerability'].quantile([0.25, 0.5, 0.75])
-    cats = pd.cut(dff['vulnerability'],
-                  bins=[-np.inf, vq[0.25], vq[0.5], vq[0.75], np.inf],
-                  labels=['Low', 'Moderate', 'High', 'Very High'])
-    cat_styles = {
-        'Low':       (TEAL,    'o', 10),
-        'Moderate':  ('#F9A825', 'o', 12),
-        'High':      (AMBER,   's', 14),
-        'Very High': (CRIMSON, 'D', 16),
-    }
-
-    for cat, (color, marker, size) in cat_styles.items():
-        mask = cats == cat
-        if mask.sum() > 0:
-            ax.scatter(dff.loc[mask, 'Longitude'], dff.loc[mask, 'Latitude'],
-                       c=color, marker=marker, s=size, alpha=0.6, edgecolors='none',
-                       label=f'{cat} (n={mask.sum()})', zorder=3)
-
-    ax.legend(title='Vulnerability', loc='upper right', fontsize=10,
-              title_fontsize=11, framealpha=0.95, markerscale=1.3)
+    # Smooth IDW surface of climate vulnerability (HI × normalised seasonal
+    # sensitivity), clipped to the country. vmax at the 95th pct so the tail
+    # doesn't wash out the gradient.
+    m = dff[['Longitude', 'Latitude', 'vulnerability']].dropna()
+    vmax = float(np.nanpercentile(dff['vulnerability'], 95)) or 1.0
+    idw_clipped_surface(fig, ax, m['Longitude'].values, m['Latitude'].values,
+                        m['vulnerability'].values, cmap='YlOrRd', vmin=0, vmax=vmax,
+                        label='Climate vulnerability', extend='max')
 
     fig.tight_layout()
     save_panel(fig, 'T1_F06_spatial_vulnerability.png')
