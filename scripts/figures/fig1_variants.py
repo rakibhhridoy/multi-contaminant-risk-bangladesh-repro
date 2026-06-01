@@ -185,7 +185,9 @@ def v3():
     # (a) observed bistable potential, (b) phosphate-led surveillance reframing.
     fig = plt.figure(figsize=(15,5.6))
     gs = fig.add_gridspec(1,2,width_ratios=[1.0,1.28],wspace=0.16)
-    a=fig.add_subplot(gs[0,0]); real_potential(a); lab(a,'(a) Observed bistable arsenic potential')
+    # (a) is the STYLISED concept double-well (the REAL empirical potential is
+    # Fig 2d — avoid duplicating it here).
+    a=fig.add_subplot(gs[0,0]); double_well(a); lab(a,'(a) Phosphate-controlled bistable potential')
     b=fig.add_subplot(gs[0,1]); surveillance(b,title=False,aspect='auto'); lab(b,'(b) Phosphate-led surveillance reframing')
     # FINAL: V3 is the chosen Figure 1 -> export at 300 dpi to the package
     for d in [Path('Draft/STOTENSubmission/submission'), Path('Draft/STOTENSubmission/source')]:
