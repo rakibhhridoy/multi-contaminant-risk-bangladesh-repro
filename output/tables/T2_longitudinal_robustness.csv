@@ -1,0 +1,3 @@
+subset,n,cbe_pass_2012_pct,cbe_pass_2020_pct,HI4_2012,HI4_2020,HI4_wilcoxon_p,HI_noMn_2012,HI_noMn_2020,HI_noMn_wilcoxon_p,As_ugL_2012,As_ugL_2020,As_wilcoxon_p,Mn_mgL_2012,Mn_mgL_2020
+all paired-complete,215,35.3,82.8,1.575,2.149,0.0028,1.132,0.964,0.6813,3.75,4.62,0.0417,0.185,0.3448
+charge-balance PASS in both epochs,61,100.0,100.0,2.126,2.508,0.0841,1.25,1.47,0.9513,7.5,7.53,0.1851,0.2,0.3203

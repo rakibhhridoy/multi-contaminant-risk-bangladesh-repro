@@ -147,25 +147,35 @@ CENTRAL_DELTA_P = {'ssp245': 12.0, 'ssp585': 18.0}  # % precip increase by 2050
 def ensemble_precipitation_delta(model_df):
     """Derive a per-model precipitation-change signal ΔP for each SSP.
 
-    All WorldClim CMIP6 files are future projections (2041-2060), so there is
-    no in-file historical baseline. We anchor the ensemble-MEDIAN ΔP to the
-    well-established IPCC AR6 / Alamgir 2019 central values, and scale each
-    model by its relative wetness within its SSP so that the inter-model
-    SPREAD reflects genuine model disagreement:
+    All WorldClim 2.1 CMIP6 files are future projections (2041-2060) that have
+    been delta-downscaled onto a COMMON observed 1970-2000 baseline, so the
+    inter-model differences in the absolute future field are, to first order,
+    the inter-model differences in the projected CHANGE (the shared baseline
+    cancels). We exploit this: we anchor the ensemble-MEAN ΔP to the
+    well-established IPCC AR6 / Alamgir 2019 central value, which implies a
+    common baseline B = mean(precip)/(1 + ΔP_central), and then read each
+    model's GENUINE fractional change directly off that baseline:
 
-        ΔP_model = ΔP_central(ssp) × (precip_model / precip_ensemble_mean(ssp))
+        B_ssp     = mean_m(precip_m) / (1 + ΔP_central(ssp)/100)
+        ΔP_model  = 100 × (precip_model − B_ssp) / B_ssp
 
-    This yields a distribution of ΔP whose median ≈ the literature value and
-    whose 5-95% range is the empirical CMIP6 inter-model spread for Bangladesh.
+    Unlike the earlier wetness-ratio scaling (ΔP = ΔP_central × precip/mean),
+    which mechanically compressed the spread to the CV of the absolute field
+    (~4%), this recovers the true inter-model spread of the fractional change
+    (CV ~0.2-0.4). The ensemble mean still equals the literature ΔP_central by
+    construction, but the spread is no longer artificially narrow. NB: even
+    this is a lower bound, because delta-downscaling smooths the raw GCM
+    monsoon-change disagreement.
     """
     model_df = model_df.copy()
     deltas = []
     for ssp, grp in model_df.groupby('ssp'):
         ens_mean = grp['bd_mean_annual_precip_mm'].mean()
         central = CENTRAL_DELTA_P.get(ssp, 12.0)
+        baseline = ens_mean / (1.0 + central / 100.0)  # implied common baseline
         for idx, row in grp.iterrows():
-            scale = row['bd_mean_annual_precip_mm'] / ens_mean
-            deltas.append((idx, central * scale))
+            dp = 100.0 * (row['bd_mean_annual_precip_mm'] - baseline) / baseline
+            deltas.append((idx, dp))
     for idx, dp in deltas:
         model_df.loc[idx, 'delta_P_pct'] = dp
     # Empirical inter-model CV of ΔP per SSP (for T5)

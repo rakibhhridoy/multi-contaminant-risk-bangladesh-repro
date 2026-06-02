@@ -1,0 +1,5 @@
+PO4_threshold_mgL,As_mode,prevalence,flagged_frac,sensitivity,specificity,PPV,NPV
+1.5,WHO 10,0.322,0.353,0.565,0.748,0.516,0.784
+1.5,saddle 22,0.215,0.353,0.617,0.719,0.376,0.873
+2.0,WHO 10,0.322,0.266,0.476,0.833,0.576,0.77
+2.0,saddle 22,0.215,0.266,0.53,0.806,0.428,0.862

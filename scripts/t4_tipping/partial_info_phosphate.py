@@ -78,19 +78,59 @@ def cv_auc(df, features, target, n_splits=5, seed=RANDOM_STATE):
 
 
 def bootstrap_delta_auc(df, base_feats, full_feats, target, n_boot=N_BOOT):
-    """Bootstrap CI on ΔAUC = AUC(Full) - AUC(Base)."""
+    """Bootstrap CI on ΔAUC = AUC(Full) - AUC(Base), out-of-bag (no leakage).
+
+    Earlier this ran 5-fold CV INSIDE each bootstrap resample, so duplicated rows
+    could land in both train and test folds and optimistically bias ΔAUC. Here we
+    fit on the in-bag rows and evaluate AUC on the out-of-bag rows (.632-style),
+    which keeps train and test disjoint within every replicate.
+    """
     deltas = np.empty(n_boot)
     n = len(df)
+    X_base = df[base_feats].values
+    X_full = df[full_feats].values
+    y = df[target].values
     for b in range(n_boot):
         idx = RNG.choice(n, n, replace=True)
-        sub = df.iloc[idx]
-        if sub[target].nunique() < 2:
+        oob = np.setdiff1d(np.arange(n), np.unique(idx))
+        if len(oob) < 20 or len(np.unique(y[idx])) < 2 or len(np.unique(y[oob])) < 2:
             deltas[b] = np.nan
             continue
-        a_base, _ = cv_auc(sub, base_feats, target, n_splits=5, seed=b)
-        a_full, _ = cv_auc(sub, full_feats, target, n_splits=5, seed=b)
+        rf_b = RandomForestClassifier(n_estimators=300, random_state=b,
+                                      class_weight='balanced', n_jobs=-1)
+        rf_f = RandomForestClassifier(n_estimators=300, random_state=b,
+                                      class_weight='balanced', n_jobs=-1)
+        rf_b.fit(X_base[idx], y[idx])
+        rf_f.fit(X_full[idx], y[idx])
+        a_base = roc_auc_score(y[oob], rf_b.predict_proba(X_base[oob])[:, 1])
+        a_full = roc_auc_score(y[oob], rf_f.predict_proba(X_full[oob])[:, 1])
         deltas[b] = a_full - a_base
     return deltas
+
+
+def operating_characteristics(df):
+    """Sensitivity/specificity/PPV/NPV of a dissolved-PO4 threshold rule for
+    flagging high-arsenic wells -- the actual screening claim. Reported at the
+    proposed field thresholds (1.5 and 2.0 mg/L) against both arsenic-mode
+    definitions (WHO 10 ug/L and the GMM saddle 22 ug/L)."""
+    rows = []
+    po4 = df['PO43-'].values
+    for thr in (1.5, 2.0):
+        for as_thr, lbl in ((10, 'WHO 10'), (22, 'saddle 22')):
+            pred = po4 >= thr
+            pos = df['As'].values > as_thr
+            tp = int((pred & pos).sum()); fp = int((pred & ~pos).sum())
+            fn = int((~pred & pos).sum()); tn = int((~pred & ~pos).sum())
+            sens = tp / (tp + fn) if (tp + fn) else np.nan
+            spec = tn / (tn + fp) if (tn + fp) else np.nan
+            ppv = tp / (tp + fp) if (tp + fp) else np.nan
+            npv = tn / (tn + fn) if (tn + fn) else np.nan
+            rows.append({'PO4_threshold_mgL': thr, 'As_mode': lbl,
+                         'prevalence': round(pos.mean(), 3),
+                         'flagged_frac': round(pred.mean(), 3),
+                         'sensitivity': round(sens, 3), 'specificity': round(spec, 3),
+                         'PPV': round(ppv, 3), 'NPV': round(npv, 3)})
+    return pd.DataFrame(rows)
 
 
 def conditional_mi(df, target, base_feats, extra_feat, n_bins=5):
@@ -218,6 +258,12 @@ def main():
     print("SUMMARY")
     print("=" * 75)
     print(summary.to_string(index=False, float_format=lambda x: f'{x:.4f}'))
+
+    # Operating characteristics of the field PO4-threshold screening rule
+    oc = operating_characteristics(df)
+    oc.to_csv(TABLES_DIR / 'T4_po4_screening_operating_characteristics.csv', index=False)
+    print("\n--- PO4-threshold screening operating characteristics ---")
+    print(oc.to_string(index=False))
 
     # Figure
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))

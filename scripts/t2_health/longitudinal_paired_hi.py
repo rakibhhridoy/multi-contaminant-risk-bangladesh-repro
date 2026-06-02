@@ -54,6 +54,11 @@ def main():
     def HI(df):
         return (hq(df['As'], 'As', True) + hq(df['Mn'], 'Mn')
                 + hq(df['Fe'], 'Fe') + hq(df['NO3'], 'NO3'))
+
+    def HI_noMn(df):
+        return (hq(df['As'], 'As', True) + hq(df['Fe'], 'Fe')
+                + hq(df['NO3'], 'NO3'))
+
     HIo, HIn = HI(o), HI(n)
     CRo, CRn = cr_as(o['As']), cr_as(n['As'])
     as_safe_then_exceed = ((o['As'] <= 10) & (n['As'] > 10)).sum()
@@ -81,6 +86,48 @@ def main():
     res.to_csv(OUT / 'T2_longitudinal_paired_hi.csv', index=False)
     print(res.to_string(index=False))
     print(f'\nwrote {OUT / "T2_longitudinal_paired_hi.csv"}')
+
+    # ── Robustness: charge-balance restriction + Mn-exclusion ────────────────
+    # The two epochs differ markedly in analytical quality (charge-balance pass
+    # rate 35% in 2012 vs 83% in 2020), and the redox-sensitive Mn measurement is
+    # the analyte most vulnerable to inter-survey filtration/preservation changes.
+    # These robustness cuts test whether the apparent HI rise is real geochemical
+    # change or an artefact of the protocol/quality shift.
+    def subset_stats(keys_sub, label):
+        if len(keys_sub) < 5:
+            return None
+        os_, ns_ = old.loc[keys_sub], new.loc[keys_sub]
+        hi_o, hi_n = HI(os_), HI(ns_)
+        hinm_o, hinm_n = HI_noMn(os_), HI_noMn(ns_)
+        return {
+            'subset': label,
+            'n': len(keys_sub),
+            'cbe_pass_2012_pct': round(100*(os_['CBE_flag'] == 'PASS').mean(), 1),
+            'cbe_pass_2020_pct': round(100*(ns_['CBE_flag'] == 'PASS').mean(), 1),
+            'HI4_2012': round(hi_o.median(), 3),
+            'HI4_2020': round(hi_n.median(), 3),
+            'HI4_wilcoxon_p': round(wilcoxon(hi_n.values, hi_o.values).pvalue, 4),
+            'HI_noMn_2012': round(hinm_o.median(), 3),
+            'HI_noMn_2020': round(hinm_n.median(), 3),
+            'HI_noMn_wilcoxon_p': round(wilcoxon(hinm_n.values, hinm_o.values).pvalue, 4),
+            'As_ugL_2012': round(os_['As'].median(), 2),
+            'As_ugL_2020': round(ns_['As'].median(), 2),
+            'As_wilcoxon_p': round(wilcoxon(ns_['As'].values, os_['As'].values).pvalue, 4),
+            'Mn_mgL_2012': round(os_['Mn'].median(), 4),
+            'Mn_mgL_2020': round(ns_['Mn'].median(), 4),
+        }
+
+    cc_cbe = [k for k in cc if old.loc[k, 'CBE_flag'] == 'PASS'
+              and new.loc[k, 'CBE_flag'] == 'PASS']
+    rob = [r for r in [
+        subset_stats(cc, 'all paired-complete'),
+        subset_stats(cc_cbe, 'charge-balance PASS in both epochs'),
+    ] if r is not None]
+    rob_df = pd.DataFrame(rob)
+    rob_df.to_csv(OUT / 'T2_longitudinal_robustness.csv', index=False)
+    print('\n── Robustness (CBE restriction + Mn-exclusion) ──')
+    print(rob_df.to_string(index=False))
+    print(f'\nwrote {OUT / "T2_longitudinal_robustness.csv"}')
 
 if __name__ == '__main__':
     main()

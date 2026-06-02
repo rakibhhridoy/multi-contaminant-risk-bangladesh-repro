@@ -734,22 +734,24 @@ def t4_f03_cascade_heatmap(df):
 
 
 def t4_f04_cusp_surface(df):
-    """Empirical effective potential and early-warning signals.
+    """Phosphate-conditioned arsenic mode membership (panel d of Fig. 2).
 
-    Replaces the textbook cusp-catastrophe surface (which was non-convergent
-    in fitting and not data-grounded). Two data-driven panels:
+    Cross-sectional, mechanistically-grounded replacement for the earlier
+    dynamical-systems early-warning panel. The cross-sectional data do not
+    support a Scheffer-type rising-variance/rising-autocorrelation signature
+    (variance of log-As in fact declines along the phosphate axis, and the
+    previously plotted lag-1 autocorrelation was computed on a sorted series
+    and is an artefact). What the data robustly show is that dissolved
+    phosphate shifts wells into the high-arsenic mode, consistent with
+    competitive desorption:
 
-      (left)  Effective potential V(log As) = -log p(log As | PO4 bin),
-              showing the empirical double-well at intermediate PO4 — the
-              real geochemical signature of bistability in this dataset.
-      (right) Early-warning signals across phosphate bins: variance and
-              lag-1 autocorrelation of log As. A rise in both as the system
-              approaches the tipping threshold is the classic Scheffer-2009
-              EWS pattern.
+      (left)  Fraction of wells in the high-arsenic mode (As > WHO 10 ug/L)
+              across phosphate bins, with the 1.5-2.0 mg/L saddle band marked.
+      (right) Median arsenic (with inter-quartile band) across phosphate bins,
+              crossing the WHO guideline within the saddle band.
     """
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
 
-    # Use the dataset's PO4 column (PO43-)
     po4_col = 'PO43-' if 'PO43-' in df.columns else None
     if po4_col is None or 'As' not in df.columns:
         return
@@ -759,68 +761,55 @@ def t4_f04_cusp_surface(df):
     if len(sub) < 100:
         return
 
-    log_as = np.log10(sub['As'].values)
+    As = sub['As'].values
     po4 = sub[po4_col].values
 
-    # Three PO4 regimes: low, mid (near saddle), high
-    q = np.quantile(po4, [0.0, 0.33, 0.67, 1.0])
-    regimes = [('Low PO$_4$', (q[0], q[1]), '#4575b4'),
-               ('Mid PO$_4$ (near saddle)', (q[1], q[2]), '#fc8d59'),
-               ('High PO$_4$', (q[2], q[3]), '#d73027')]
-
-    # ─── Panel A: empirical effective potential ─────────────────────────
-    ax1 = axes[0]
-    grid = np.linspace(log_as.min(), log_as.max(), 80)
-    from scipy.stats import gaussian_kde
-    for name, (lo, hi), color in regimes:
-        mask = (po4 >= lo) & (po4 <= hi)
-        if mask.sum() < 30:
-            continue
-        kde = gaussian_kde(log_as[mask], bw_method=0.35)
-        density = kde(grid)
-        V = -np.log(density + 1e-9)
-        V = V - V.min()
-        ax1.plot(grid, V, color=color, lw=2.4, label=name)
-    ax1.axvline(np.log10(10), color='#333', ls=':', lw=1.2,
-                label='WHO guideline (10 µg/L)')
-    ax1.set_xlabel(r'log$_{10}$ As (µg/L)')
-    ax1.set_ylabel('Effective potential $V$ (a.u.)')
-    ax1.set_title('Empirical potential by phosphate regime',
-                  fontsize=15, fontweight='bold', color=DARKTEXT)
-    ax1.legend(loc='upper right', fontsize=13, frameon=False)
-
-    # ─── Panel B: variance + autocorrelation EWS ───────────────────────
-    ax2 = axes[1]
+    # Phosphate bins spanning 5th-95th percentile; require >=20 wells/bin.
     bins = np.linspace(po4.min(), np.quantile(po4, 0.95), 9)
     centres = 0.5 * (bins[:-1] + bins[1:])
-    var_arr = np.full(len(centres), np.nan)
-    ac1_arr = np.full(len(centres), np.nan)
+    frac_high = np.full(len(centres), np.nan)
+    med_as = np.full(len(centres), np.nan)
+    q1_as = np.full(len(centres), np.nan)
+    q3_as = np.full(len(centres), np.nan)
     for i in range(len(centres)):
-        mask = (po4 >= bins[i]) & (po4 < bins[i+1])
+        mask = (po4 >= bins[i]) & (po4 < bins[i + 1])
         if mask.sum() < 20:
             continue
-        x = log_as[mask]
-        var_arr[i] = np.var(x)
-        # Lag-1 autocorrelation on the sorted series (proxy for time series)
-        xs = np.sort(x)
-        if len(xs) > 1:
-            ac1_arr[i] = np.corrcoef(xs[:-1], xs[1:])[0, 1]
-    ax2.plot(centres, var_arr, marker='o', color=CRIMSON, lw=2,
-             label='Variance of log As')
-    ax2_r = ax2.twinx()
-    ax2_r.plot(centres, ac1_arr, marker='s', color=STEEL, lw=2,
-               label='Lag-1 autocorrelation')
-    ax2.set_xlabel(r'PO$_4$ (mg/L)')
-    ax2.set_ylabel('Variance of log As', color=CRIMSON)
-    ax2_r.set_ylabel('Lag-1 autocorrelation', color=STEEL)
-    ax2.set_title('Early-warning signals along PO$_4$ axis',
-                  fontsize=15, fontweight='bold', color=DARKTEXT)
-    ax2.tick_params(axis='y', labelcolor=CRIMSON)
-    ax2_r.tick_params(axis='y', labelcolor=STEEL)
-    lines1, labels1 = ax2.get_legend_handles_labels()
-    lines2, labels2 = ax2_r.get_legend_handles_labels()
-    ax2.legend(lines1 + lines2, labels1 + labels2, loc='lower left',
-               fontsize=13, frameon=False)
+        a = As[mask]
+        frac_high[i] = (a > 10).mean()
+        med_as[i] = np.median(a)
+        q1_as[i] = np.percentile(a, 25)
+        q3_as[i] = np.percentile(a, 75)
+
+    # ─── Panel A: high-As-mode fraction vs phosphate ────────────────────
+    ax1 = axes[0]
+    ax1.axvspan(1.5, 2.0, color='0.80', alpha=0.6, lw=0,
+                label='Saddle band (1.5–2.0 mg/L)')
+    ax1.plot(centres, 100 * frac_high, marker='o', color=CRIMSON, lw=2.4,
+             ms=7, label='Wells in high-As mode')
+    ax1.set_xlabel(r'Dissolved PO$_4$ (mg/L)')
+    ax1.set_ylabel('Wells with As > 10 µg/L (%)', color=CRIMSON)
+    ax1.tick_params(axis='y', labelcolor=CRIMSON)
+    ax1.set_ylim(0, 100)
+    ax1.set_title('High-arsenic mode membership rises with phosphate',
+                  fontsize=14, fontweight='bold', color=DARKTEXT)
+    ax1.legend(loc='upper left', fontsize=12, frameon=False)
+
+    # ─── Panel B: median As (IQR band) vs phosphate ─────────────────────
+    ax2 = axes[1]
+    ax2.axvspan(1.5, 2.0, color='0.80', alpha=0.6, lw=0,
+                label='Saddle band (1.5–2.0 mg/L)')
+    ax2.fill_between(centres, q1_as, q3_as, color=STEEL_L, alpha=0.5,
+                     label='Inter-quartile range')
+    ax2.plot(centres, med_as, marker='s', color=STEEL, lw=2.4, ms=7,
+             label='Median As')
+    ax2.axhline(10, color='#333', ls=':', lw=1.4, label='WHO guideline (10 µg/L)')
+    ax2.set_xlabel(r'Dissolved PO$_4$ (mg/L)')
+    ax2.set_ylabel('Arsenic (µg/L)', color=STEEL)
+    ax2.tick_params(axis='y', labelcolor=STEEL)
+    ax2.set_title('Median arsenic crosses the guideline at the saddle band',
+                  fontsize=14, fontweight='bold', color=DARKTEXT)
+    ax2.legend(loc='upper left', fontsize=12, frameon=False)
 
     fig.tight_layout(w_pad=2.0)
     save_panel(fig, 'T4_F04_cusp_surface.png')

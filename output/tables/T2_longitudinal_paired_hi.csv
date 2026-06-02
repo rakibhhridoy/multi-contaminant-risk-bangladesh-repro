@@ -1,0 +1,10 @@
+metric,epoch_2012_2013,epoch_2020_2021,test
+n_paired_wells,215,,
+median_HI,1.575,2.149,Wilcoxon p=0.0028
+pct_HI_gt1,67.0,72.1,
+median_HQ_As,0.521,0.642,
+median_HQ_Mn,0.321,0.599,
+median_HQ_Fe,0.202,0.165,
+median_HQ_NO3,0.076,0.047,
+median_CR_As,1.00e-04,1.24e-04,Wilcoxon p=0.042
+pct_newly_exceed_WHO_As,21.7,35/161 safe-in-2012,
