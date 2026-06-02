@@ -128,7 +128,17 @@ def calculate_cdi(conc_mg_L, ir, ef, ed, bw):
 
 
 def calculate_all_risks(df, age_group='adult_male'):
-    params = EXPOSURE_PARAMS[age_group]
+    params = dict(EXPOSURE_PARAMS[age_group])
+    # Use the corrected exposure parameters (daly_estimation_corrected.py /
+    # Methods) instead of the superseded config defaults (adult-male IR=3.5).
+    _CORRECTED = {
+        'adult_male':   {'ir_L_day': 2.5, 'bw_kg': 60},
+        'adult_female': {'ir_L_day': 2.0, 'bw_kg': 55},
+        'child_6_17':   {'ir_L_day': 1.5, 'bw_kg': 35},
+        'child_0_5':    {'ir_L_day': 1.0, 'bw_kg': 15},
+    }
+    if age_group in _CORRECTED:
+        params.update(_CORRECTED[age_group])
     ir, ef, ed, bw = params['ir_L_day'], params['ef_days'], params['ed_years'], params['bw_kg']
     hi_total = np.zeros(len(df))
     hi_as_only = np.zeros(len(df))
@@ -166,7 +176,7 @@ def calculate_all_risks(df, age_group='adult_male'):
 
 def compute_hi(df):
     adult = EXPOSURE_PARAMS['adult_male']
-    IR, BW = adult['ir_L_day'], adult['bw_kg']
+    IR, BW = 2.5, 60  # corrected reference exposure (supersedes config IR=3.5)
     EF, ED = adult['ef_days'], adult['ed_years']
     AT = ED * 365
     hi = np.zeros(len(df))
