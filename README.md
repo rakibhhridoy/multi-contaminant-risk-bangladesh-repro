@@ -3,7 +3,7 @@
 Complete analysis code and data for the manuscript submitted to *Science of the Total Environment* (2026). Running `bash run_all.sh` on a clean install regenerates every numerical claim, every supplementary table, and every figure panel in the paper.
 
 - **Code repository:** https://github.com/rakibhhridoy/multi-contaminant-risk-bangladesh-repro
-- **Data archive (large CMIP6/GRACE rasters):** Zenodo, DOI to be minted at acceptance
+- **Code + data archive (this bundle, incl. large CMIP6/GRACE rasters):** Zenodo, DOI [10.5281/zenodo.20383702](https://doi.org/10.5281/zenodo.20383702)
 - **Original sample dataset:** Zenodo, DOI [10.5281/zenodo.19148957](https://doi.org/10.5281/zenodo.19148957)
 
 ---
@@ -190,4 +190,4 @@ MIT. See `LICENSE`.
 
 ## 7. Citation
 
-If you use this code or the derived analyses, please cite the manuscript (DOI to be added at acceptance) and the dataset DOI [10.5281/zenodo.19148957](https://doi.org/10.5281/zenodo.19148957).
+If you use this code or the derived analyses, please cite the manuscript (DOI to be added at acceptance), this code/data archive [10.5281/zenodo.20383702](https://doi.org/10.5281/zenodo.20383702), and the original dataset [10.5281/zenodo.19148957](https://doi.org/10.5281/zenodo.19148957).
