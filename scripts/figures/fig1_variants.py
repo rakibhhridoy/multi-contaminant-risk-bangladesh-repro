@@ -53,7 +53,7 @@ def double_well(ax):
     ax.axvline(1.0,color='#666',ls=':',lw=1.0)
     ax.text(1.0,1.03,'WHO 10 µg/L',ha='center',va='bottom',fontsize=9,color=DARK,fontweight='bold')
     ax.set_xlabel(r'log$_{10}$ As (µg/L)',fontsize=12)
-    ax.set_ylabel(r'Effective potential $V$',fontsize=12)
+    ax.set_ylabel('Conceptual stability landscape (a.u.)',fontsize=12)
     ax.set_xlim(0,3); ax.set_ylim(0,1.15); ax.tick_params(labelsize=10)
     ax.legend(loc='upper center',fontsize=9.5,frameon=False,bbox_to_anchor=(0.5,0.42))
 
@@ -121,9 +121,14 @@ def surveillance(ax, title=True, aspect='equal'):
         ax.text(6.35,7.7-i*0.62,l,fontsize=9.5,va='center')
     ax.text(7.7,4.6,r'$\sim$10$\times$ cheaper',ha='center',fontsize=11,fontweight='bold',color=STEEL)
     ax.text(7.7,4.0,'full WASH network',ha='center',fontsize=9,style='italic',color='#666')
-    ax.text(5.0,1.7,r'PO$_4$ $>$ 1.5–2.0 mg/L $\Rightarrow$ well likely high-As',
+    # R1.3: phosphate is a PRIORITISING filter, not a replacement test. The old
+    # banner read 'well likely high-As', which overstates a screen with sensitivity
+    # 0.57 and invites exactly the false reassurance the reviewer warned about.
+    ax.text(5.0,1.9,r'PO$_4$ $>$ 1.5–2.0 mg/L $\Rightarrow$ prioritise for arsenic testing',
             ha='center',fontsize=10,fontweight='bold',color=DARK,
             bbox=dict(boxstyle='round,pad=0.4',facecolor=AM_L,edgecolor=AMBER,lw=1.2))
+    ax.text(5.0,1.15,'sensitivity 0.57: a negative result does not clear a well',
+            ha='center',fontsize=9,style='italic',color='#666')
 
 
 def lab(ax, s, x=0.0, y=1.04, fontsize=13):
@@ -179,16 +184,18 @@ def v2():
     save(fig,'fig1_v2_flow.png')
 
 
-# ── V3: data panel + schematic ──
+# ── V3: single-panel surveillance figure ──
 def v3():
-    # Two-panel Fig 1 (mechanism cartoon dropped — established & in SI figS6):
-    # (a) observed bistable potential, (b) phosphate-led surveillance reframing.
-    fig = plt.figure(figsize=(15,5.6))
-    gs = fig.add_gridspec(1,2,width_ratios=[1.0,1.28],wspace=0.16)
-    # (a) is the STYLISED concept double-well (the REAL empirical potential is
-    # Fig 2d — avoid duplicating it here).
-    a=fig.add_subplot(gs[0,0]); double_well(a); lab(a,'(a) Phosphate-controlled bistable potential')
-    b=fig.add_subplot(gs[0,1]); surveillance(b,title=False,aspect='auto'); lab(b,'(b) Phosphate-led surveillance reframing')
+    # Figure 1 for the JHMA revision (2026-09-01). The stylised double-well
+    # schematic that was panel (a) has been REMOVED on reviewer R1.5's request:
+    # it was not computed from data and duplicated the empirical effective
+    # potential in Fig 2d, which now carries that argument alone. Under the
+    # de-escalation of the bistability framing (R1.1/R2.2) a stability-landscape
+    # cartoon no longer has a claim to make. Figure 1 is now the surveillance
+    # reframing only.
+    fig = plt.figure(figsize=(9.2,5.6))
+    ax = fig.add_subplot(1,1,1)
+    surveillance(ax,title=False,aspect='auto')
     # FINAL: V3 is the chosen Figure 1 -> export at 300 dpi to the package
     for d in [Path('Draft/STOTENSubmission/submission'), Path('Draft/STOTENSubmission/source')]:
         fig.savefig(d/'figure1_conceptual.png', dpi=300, bbox_inches='tight', facecolor='white')

@@ -1,0 +1,61 @@
+{
+ "rows": [
+  {
+   "parameter": "Hill $n$ (steepness)",
+   "kwarg": "n",
+   "low_value": 1.275,
+   "default_value": 1.5,
+   "high_value": 1.725,
+   "DALY_at_low": 973745.395372,
+   "DALY_at_high": 912897.379734,
+   "DALY_baseline": 941883.61761,
+   "pct_low": 3.382772,
+   "pct_high": -3.077476,
+   "swing_DALY": 60848.015639,
+   "swing_pct": 6.460248
+  },
+  {
+   "parameter": "Ingestion rate (L/day)",
+   "kwarg": "ir",
+   "low_value": 2.0,
+   "default_value": 2.5,
+   "high_value": 3.0,
+   "DALY_at_low": 773151.388595,
+   "DALY_at_high": 1087750.927032,
+   "DALY_baseline": 941883.61761,
+   "pct_low": -17.91434,
+   "pct_high": 15.486766,
+   "swing_DALY": 314599.538437,
+   "swing_pct": 33.401105
+  },
+  {
+   "parameter": "Hill $K$ (half-max HI)",
+   "kwarg": "k",
+   "low_value": 3.0,
+   "default_value": 4.0,
+   "high_value": 5.0,
+   "DALY_at_low": 1171857.551097,
+   "DALY_at_high": 774289.451818,
+   "DALY_baseline": 941883.61761,
+   "pct_low": 24.416385,
+   "pct_high": -17.793511,
+   "swing_DALY": 397568.099279,
+   "swing_pct": 42.209896
+  },
+  {
+   "parameter": "Hill $P_{\\max}$",
+   "kwarg": "p_max",
+   "low_value": 0.135,
+   "default_value": 0.18,
+   "high_value": 0.225,
+   "DALY_at_low": 707835.292237,
+   "DALY_at_high": 1175931.942984,
+   "DALY_baseline": 941883.61761,
+   "pct_low": -24.848964,
+   "pct_high": 24.848964,
+   "swing_DALY": 468096.650747,
+   "swing_pct": 49.697929
+  }
+ ],
+ "baseline": 941883.61761
+}

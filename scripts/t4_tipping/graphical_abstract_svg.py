@@ -20,10 +20,10 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import MultiPolygon
 
-ROOT = Path(__file__).resolve().parents[2]   # repo root (portable)
+ROOT = Path('/Volumes/SSD Rx/Research/GroundWater/Paper2')
 SHP = ROOT / 'data/gis/bgd_admbnda_adm0_bbs_20201113.shp'
 CSV = ROOT / 'data/bangladesh_groundwater_arsenic_1807samples.csv'
-OUT_SVG = ROOT / 'output' / 'figures' / 'Graphical_Abstract.svg'
+OUT_SVG = ROOT / 'Draft/STOTENSubmission/Graphical_Abstract.svg'
 
 # ---- palette ---------------------------------------------------------------
 C_AS   = '#c0392b'   # arsenic / high risk
@@ -130,22 +130,35 @@ def idw_surface_b64(bounds, px_w=320, px_h=470, k=10, p=2, vmax=50.0):
     return base64.b64encode(buf.getvalue()).decode('ascii')
 
 
-def bistable_path(box, n=240):
-    """Double-well V(t)=t^4-1.7 t^2 mapped into box (bx,by,bw,bh)."""
+def po4_response_path(box):
+    """Empirical phosphate-conditioned arsenic response, computed from the data.
+
+    Replaces the stylised double-well schematic used before 2026-09-01. Reviewer
+    R1.5 required the non-data schematic to go from Figure 1; carrying the same
+    cartoon in the graphical abstract would have been inconsistent. This is the
+    Fig 2d relationship: fraction of wells above the WHO arsenic guideline across
+    dissolved-phosphate bins spanning the 5th-95th percentile.
+    """
+    import pandas as pd
+    from config import DATA_FILE, assign_zones
     bx, by, bw, bh = box
-    t = np.linspace(-1.7, 1.7, n)
-    v = t**4 - 1.7 * t**2
-    x = bx + (t - t.min()) / (t.max() - t.min()) * bw
-    y = by + bh - (v - v.min()) / (v.max() - v.min()) * bh
-    d = 'M' + ' L'.join(f'{xi:.1f},{yi:.1f}' for xi, yi in zip(x, y))
-    # well + saddle positions (data t -> svg)
-    def tx(tt): return bx + (tt - t.min()) / (t.max() - t.min()) * bw
-    def ty(vv): return by + bh - (vv - v.min()) / (v.max() - v.min()) * bh
-    tw = np.sqrt(1.7 / 2)
-    low = (tx(-tw), ty((-tw)**4 - 1.7 * (-tw)**2))
-    high = (tx(tw), ty((tw)**4 - 1.7 * (tw)**2))
-    saddle = (tx(0), ty(0))
-    return d, low, high, saddle
+    d = assign_zones(pd.read_csv(DATA_FILE)).dropna(subset=['As', 'PO43-'])
+    lo, hi = d['PO43-'].quantile([.05, .95])
+    edges = np.linspace(lo, hi, 9)
+    pts = []
+    for i in range(8):
+        m = (d['PO43-'] >= edges[i]) & (d['PO43-'] < edges[i + 1])
+        if m.sum() >= 15:
+            pts.append(((edges[i] + edges[i + 1]) / 2,
+                        100 * (d.loc[m, 'As'] > 10).mean()))
+    xs = np.array([p[0] for p in pts]); ys = np.array([p[1] for p in pts])
+    YMAX = 80.0
+    sx = bx + (xs - lo) / (hi - lo) * bw
+    sy = by + bh - np.clip(ys, 0, YMAX) / YMAX * bh
+    path = 'M' + ' L'.join(f'{a:.1f},{b:.1f}' for a, b in zip(sx, sy))
+    # WHO-guideline saddle band 1.5-2.0 mg/L, in svg x
+    band = (bx + (1.5 - lo) / (hi - lo) * bw, bx + (2.0 - lo) / (hi - lo) * bw)
+    return path, list(zip(sx, sy)), band, (bx, by, bw, bh)
 
 
 # ===========================================================================
@@ -176,7 +189,7 @@ def main():
         'Cumulative multi-contaminant groundwater exposure in Bangladesh',
         29, INK, 'bold'))
     parts.append(T(W/2, 78,
-        'A low-cost phosphate proxy flags a doubled, climate-amplified health burden',
+        'A low-cost phosphate indicator ranks wells for testing; cumulative burden is twice arsenic alone',
         17.5, GREY, style='italic'))
     parts.append(f'<line x1="40" y1="98" x2="{W-40}" y2="98" '
                  f'stroke="#e3e8f0" stroke-width="1.5"/>')
@@ -201,7 +214,7 @@ def main():
     parts.append('<!-- ============ STAGE 1: cheap proxy ============ -->')
     parts.append(f'<circle cx="{COL_X[0]+18}" cy="135" r="13" fill="{C_PO4}"/>')
     parts.append(T(COL_X[0]+18, 140, '1', 15, '#fff', 'bold'))
-    parts.append(T(COL_X[0]+40, 140, 'Cheap proxy', 17, C_PO4, 'bold', 'start'))
+    parts.append(T(COL_X[0]+40, 140, 'Cheap indicator', 17, C_PO4, 'bold', 'start'))
 
     # phosphate test strip icon ---------------------------------------------
     sx, sy = COL_X[0]+128, 168
@@ -228,26 +241,34 @@ def main():
                  f'fill="{GREY}"/>')                                          # base
     parts.append(T(wx+3, wy+82, 'tube well', 11, GREY))
 
-    # bistable double-well curve --------------------------------------------
-    cbox = (COL_X[0]+40, 300, COL_W-90, 120)
-    d, low, high, saddle = bistable_path(cbox)
-    parts.append(f'<g id="bistable">')
-    parts.append(f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="3" '
-                 f'stroke-linejoin="round"/>')
-    parts.append(f'<circle cx="{low[0]:.1f}" cy="{low[1]:.1f}" r="7" '
-                 f'fill="{C_SAFE}" stroke="#fff" stroke-width="2"/>')
-    parts.append(f'<circle cx="{high[0]:.1f}" cy="{high[1]:.1f}" r="7" '
-                 f'fill="{C_AS}" stroke="#fff" stroke-width="2"/>')
-    parts.append(f'<circle cx="{saddle[0]:.1f}" cy="{saddle[1]:.1f}" r="3.5" '
-                 f'fill="none" stroke="{GREY}" stroke-width="2"/>')
-    parts.append(T(low[0], low[1]+22, 'low-As', 10.5, C_SAFE, 'bold'))
-    parts.append(T(high[0], high[1]+22, 'high-As', 10.5, C_AS, 'bold'))
-    parts.append(T(saddle[0], saddle[1]-12, 'tipping point', 10, GREY,
-                  style='italic'))
+    # empirical phosphate-response curve (from data; see po4_response_path) ---
+    cbox = (COL_X[0]+55, 300, COL_W-105, 120)
+    dpath, pts, band, (bx, by, bw, bh) = po4_response_path(cbox)
+    parts.append('<g id="po4response">')
+    # saddle band
+    parts.append(f'<rect x="{band[0]:.1f}" y="{by}" width="{band[1]-band[0]:.1f}" '
+                 f'height="{bh}" fill="{C_PO4}" opacity="0.10"/>')
+    # axes
+    parts.append(f'<line x1="{bx}" y1="{by+bh}" x2="{bx+bw}" y2="{by+bh}" '
+                 f'stroke="#c7cede" stroke-width="1.5"/>')
+    parts.append(f'<line x1="{bx}" y1="{by}" x2="{bx}" y2="{by+bh}" '
+                 f'stroke="#c7cede" stroke-width="1.5"/>')
+    parts.append(f'<path d="{dpath}" fill="none" stroke="{C_AS}" stroke-width="3" '
+                 f'stroke-linejoin="round" stroke-linecap="round"/>')
+    for px, py in pts:
+        parts.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="4" fill="{C_AS}" '
+                     f'stroke="#fff" stroke-width="1.5"/>')
+    parts.append(T(bx-8, by+6, '80%', 9, GREY, anchor='end'))
+    parts.append(T(bx-8, by+bh, '0', 9, GREY, anchor='end'))
+    parts.append(T(bx-34, by+bh/2, 'wells >10', 9, GREY, anchor='middle'))
+    parts.append(T(bx-34, by+bh/2+11, 'µg/L As', 9, GREY, anchor='middle'))
+    parts.append(T((band[0]+band[1])/2, by-8, 'PO₄ 1.5-2.0 mg/L', 9, C_PO4,
+                   'bold', style='italic'))
+    parts.append(T(bx+bw/2, by+bh+18, 'dissolved phosphate (mg/L) →', 10, GREY))
     parts.append('</g>')
     parts.append(T(CX[0], 460,
-                  'PO₄ ranks wells by proximity', 12.5, INK))
-    parts.append(T(CX[0], 478, 'to the arsenic tipping point', 12.5, INK))
+                  'PO₄ ranks wells for confirmatory', 12.5, INK))
+    parts.append(T(CX[0], 478, 'arsenic testing (sensitivity 0.57)', 12.5, INK))
     # cost pill
     parts.append(f'<rect x="{CX[0]-95}" y="498" width="190" height="30" rx="15" '
                  f'fill="#eaf2fb"/>')
@@ -357,7 +378,7 @@ def main():
                  f'stroke="{C_AS}" stroke-width="2.4" fill="none" '
                  f'stroke-linecap="round" stroke-linejoin="round"/>'
                  f'</g>')
-    parts.append(T(rcx, 251, '3 zones cross the', 13, C_AS, 'bold'))
+    parts.append(T(rcx, 251, '1 zone crosses the', 13, C_AS, 'bold'))
     parts.append(T(rcx, 270, 'WHO As limit by 2050', 13, C_AS))
     parts.append(T(rcx, 288, '(CMIP6, SSP5-8.5)', 9.5, GREY))
 
@@ -385,17 +406,22 @@ def main():
 
     # ---- rasterise: SVG is the editable master; Elsevier needs PNG/TIFF -----
     import subprocess, shutil
-    pkg = ROOT / 'output' / 'figures'
-    pkg.mkdir(parents=True, exist_ok=True)
+    pkg = ROOT / 'Draft/STOTENSubmission'
     png = pkg / 'Graphical_Abstract.png'
+    targets = [png,
+               pkg / 'figures_png/graphical_abstract.png',
+               pkg / 'submission/Graphical_Abstract.png']
     rc = shutil.which('rsvg-convert')
     if not rc:
         print('rsvg-convert not found - SVG written only'); return
     subprocess.run([rc, '-w', '2656', str(OUT_SVG), '-o', str(png)], check=True)
+    for t in targets[1:]:
+        if t.parent.exists():
+            shutil.copy(png, t)
     try:
         from PIL import Image
         im = Image.open(png).convert('RGB')
-        im.save(pkg / 'graphical_abstract.tiff',
+        im.save(pkg / 'figures_tiff/graphical_abstract.tiff',
                 compression='tiff_lzw', dpi=(300, 300))
         print(f'rendered PNG + TIFF at {im.size[0]}x{im.size[1]} px')
     except Exception as e:

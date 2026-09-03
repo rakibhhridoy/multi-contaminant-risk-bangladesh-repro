@@ -1,0 +1,60 @@
+{
+ "table": [
+  {
+   "target": "As > 10 \u00b5g/L (WHO)",
+   "AUC_base": 0.686291,
+   "AUC_full": 0.772469,
+   "delta_AUC": 0.086178,
+   "delta_AUC_CI_lo": 0.056468,
+   "delta_AUC_CI_hi": 0.106217,
+   "PO4_perm_rank": 1,
+   "conditional_MI": 0.033909,
+   "PO4_informative": true
+  },
+  {
+   "target": "As > 22 \u00b5g/L (saddle)",
+   "AUC_base": 0.731339,
+   "AUC_full": 0.789967,
+   "delta_AUC": 0.058628,
+   "delta_AUC_CI_lo": 0.02603,
+   "delta_AUC_CI_hi": 0.083845,
+   "PO4_perm_rank": 1,
+   "conditional_MI": 0.020735,
+   "PO4_informative": true
+  }
+ ],
+ "blocked": [
+  {
+   "thr": "WHO 10",
+   "base": 0.65,
+   "full": 0.73,
+   "d": 0.081,
+   "lo": 0.047,
+   "hi": 0.126,
+   "pgt0": 100
+  },
+  {
+   "thr": "saddle 22",
+   "base": 0.68,
+   "full": 0.74,
+   "d": 0.062,
+   "lo": 0.02,
+   "hi": 0.096,
+   "pgt0": 99
+  }
+ ],
+ "random": [
+  {
+   "thr": "WHO 10",
+   "base": 0.69,
+   "full": 0.77,
+   "d": 0.086
+  },
+  {
+   "thr": "saddle 22",
+   "base": 0.73,
+   "full": 0.79,
+   "d": 0.059
+  }
+ ]
+}

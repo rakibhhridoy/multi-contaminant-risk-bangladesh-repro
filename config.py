@@ -33,8 +33,13 @@ COL_DISTRICT = 'District'
 # Health-relevant contaminants (measured in dataset)
 HEALTH_CONTAMINANTS = {
     'As':   {'unit': 'µg/L', 'who_guideline': 10.0,   'epa_mcl': 10.0},
-    'Mn2+': {'unit': 'mg/L', 'who_guideline': 0.4,    'epa_mcl': 0.05},
-    'Fe2+': {'unit': 'mg/L', 'who_guideline': 0.3,    'epa_mcl': 0.3},
+    # Mn: WHO 2021 provisional guideline value (background document
+    # WHO/HEP/ECH/WSH/2021.5). The 2011 4th-edition health-based value of 0.4 mg/L
+    # is superseded; 0.1 mg/L is an acceptability (staining/taste) value.
+    'Mn2+': {'unit': 'mg/L', 'who_guideline': 0.08,   'epa_mcl': 0.05},
+    # Fe: WHO provisional HEALTH-BASED value. 0.3 mg/L is the EPA secondary MCL,
+    # an aesthetic (staining) threshold, and is not health-based.
+    'Fe2+': {'unit': 'mg/L', 'who_guideline': 2.0,    'epa_mcl': 0.3},
     'Cr3+': {'unit': 'mg/L', 'who_guideline': 0.05,   'epa_mcl': 0.1},
     'Al3+': {'unit': 'mg/L', 'who_guideline': 0.2,    'epa_mcl': 0.2},
     'Cu2+': {'unit': 'mg/L', 'who_guideline': 2.0,    'epa_mcl': 1.3},

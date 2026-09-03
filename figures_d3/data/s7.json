@@ -1,0 +1,26 @@
+{
+ "cohorts": [
+  {
+   "cohort": "Van Phuc, Vietnam (Red River, freshwater)",
+   "n": 124,
+   "As_median_ugL": 0.4,
+   "PO4_median_mgL": 0.429312,
+   "spearman_As_PO4": 0.444943,
+   "spearman_p": 0.0,
+   "gmm_delta_bic": 8.609999
+  },
+  {
+   "cohort": "SW Bangladesh (Sundarbans, saline tidal)",
+   "n": 77,
+   "As_median_ugL": 48.116,
+   "PO4_median_mgL": 5.89691,
+   "spearman_As_PO4": -0.053131,
+   "spearman_p": 0.64629,
+   "gmm_delta_bic": -1.210306
+  }
+ ],
+ "bangladesh": {
+  "n": 1574,
+  "rho": 0.314299
+ }
+}

@@ -1,0 +1,1665 @@
+{
+ "scenarios": [
+  {
+   "scenario": "S1_deepen_wells",
+   "description": "Deepen shallow/intermediate wells to >150 m",
+   "annual_DALY": 570743.581818,
+   "annual_DALY_averted": 371140.035792,
+   "pct_reduction": 39.404023,
+   "annual_cancer_cases": 290.434875,
+   "annual_cost_usd": 316214067.995311,
+   "ICER_usd_per_daly": 852.00743,
+   "very_cost_effective": true,
+   "cost_effective": true
+  },
+  {
+   "scenario": "S2_po4_removal",
+   "description": "PO4 removal sorbent at wellhead",
+   "annual_DALY": 708434.636364,
+   "annual_DALY_averted": 233448.981246,
+   "pct_reduction": 24.785332,
+   "annual_cancer_cases": 161.087686,
+   "annual_cost_usd": 48060844.079719,
+   "ICER_usd_per_daly": 205.873008,
+   "very_cost_effective": true,
+   "cost_effective": true
+  },
+  {
+   "scenario": "S3_multi_treatment",
+   "description": "Multi-contaminant treatment (Fe oxidation + As/Mn removal)",
+   "annual_DALY": 237682.659838,
+   "annual_DALY_averted": 704200.957772,
+   "pct_reduction": 74.765177,
+   "annual_cancer_cases": 76.521913,
+   "annual_cost_usd": 195724501.758499,
+   "ICER_usd_per_daly": 277.93842,
+   "very_cost_effective": true,
+   "cost_effective": true
+  },
+  {
+   "scenario": "S4_seasonal_switch",
+   "description": "Switch to deep wells in wet season only",
+   "annual_DALY": 495594.330537,
+   "annual_DALY_averted": 446289.287073,
+   "pct_reduction": 47.382636,
+   "annual_cancer_cases": 142.265749,
+   "annual_cost_usd": 26990562.719812,
+   "ICER_usd_per_daly": 60.477729,
+   "very_cost_effective": true,
+   "cost_effective": true
+  },
+  {
+   "scenario": "S5_fertilizer_policy",
+   "description": "Reduce PO4 fertilizer 30% in high-As zones",
+   "annual_DALY": 879798.677957,
+   "annual_DALY_averted": 62084.939653,
+   "pct_reduction": 6.591572,
+   "annual_cancer_cases": 289.732696,
+   "annual_cost_usd": 25000000.0,
+   "ICER_usd_per_daly": 402.674145,
+   "very_cost_effective": true,
+   "cost_effective": true
+  }
+ ],
+ "equity": [
+  {
+   "phys_zone": "Barind_Tract",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 2763906.960927,
+   "intervention_daly": 2763906.960927,
+   "dalys_averted": 0.0,
+   "pct_reduction": 0.0,
+   "baseline_hi_exceed_pct": 80.45977,
+   "intervention_hi_exceed_pct": 80.45977
+  },
+  {
+   "phys_zone": "Barind_Tract",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 2763906.960927,
+   "intervention_daly": 1912607.904631,
+   "dalys_averted": 851299.056296,
+   "pct_reduction": 30.800568,
+   "baseline_hi_exceed_pct": 80.45977,
+   "intervention_hi_exceed_pct": 77.011494
+  },
+  {
+   "phys_zone": "Barind_Tract",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 2763906.960927,
+   "intervention_daly": 728884.001967,
+   "dalys_averted": 2035022.958959,
+   "pct_reduction": 73.62849,
+   "baseline_hi_exceed_pct": 80.45977,
+   "intervention_hi_exceed_pct": 45.977011
+  },
+  {
+   "phys_zone": "Barind_Tract",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 2763906.960927,
+   "intervention_daly": 1747639.343657,
+   "dalys_averted": 1016267.61727,
+   "pct_reduction": 36.769241,
+   "baseline_hi_exceed_pct": 80.45977,
+   "intervention_hi_exceed_pct": 63.793103
+  },
+  {
+   "phys_zone": "Barind_Tract",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 2763906.960927,
+   "intervention_daly": 2521721.178613,
+   "dalys_averted": 242185.782313,
+   "pct_reduction": 8.762443,
+   "baseline_hi_exceed_pct": 80.45977,
+   "intervention_hi_exceed_pct": 79.885057
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 2952685.361015,
+   "intervention_daly": 1528502.344049,
+   "dalys_averted": 1424183.016966,
+   "pct_reduction": 48.233484,
+   "baseline_hi_exceed_pct": 78.461538,
+   "intervention_hi_exceed_pct": 94.615385
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 2952685.361015,
+   "intervention_daly": 2095765.491329,
+   "dalys_averted": 856919.869687,
+   "pct_reduction": 29.021713,
+   "baseline_hi_exceed_pct": 78.461538,
+   "intervention_hi_exceed_pct": 65.384615
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 2952685.361015,
+   "intervention_daly": 3609.341101,
+   "dalys_averted": 2949076.019915,
+   "pct_reduction": 99.877761,
+   "baseline_hi_exceed_pct": 78.461538,
+   "intervention_hi_exceed_pct": 27.692308
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 2952685.361015,
+   "intervention_daly": 1751962.188192,
+   "dalys_averted": 1200723.172823,
+   "pct_reduction": 40.665463,
+   "baseline_hi_exceed_pct": 78.461538,
+   "intervention_hi_exceed_pct": 55.384615
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 2952685.361015,
+   "intervention_daly": 2707057.54657,
+   "dalys_averted": 245627.814445,
+   "pct_reduction": 8.318794,
+   "baseline_hi_exceed_pct": 78.461538,
+   "intervention_hi_exceed_pct": 76.153846
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 6553492.554471,
+   "intervention_daly": 3006177.1961,
+   "dalys_averted": 3547315.358371,
+   "pct_reduction": 54.128624,
+   "baseline_hi_exceed_pct": 76.328502,
+   "intervention_hi_exceed_pct": 87.439614
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 6553492.554471,
+   "intervention_daly": 4526600.822941,
+   "dalys_averted": 2026891.731531,
+   "pct_reduction": 30.92842,
+   "baseline_hi_exceed_pct": 76.328502,
+   "intervention_hi_exceed_pct": 70.048309
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 6553492.554471,
+   "intervention_daly": 1920233.883113,
+   "dalys_averted": 4633258.671358,
+   "pct_reduction": 70.699076,
+   "baseline_hi_exceed_pct": 76.328502,
+   "intervention_hi_exceed_pct": 33.816425
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 6553492.554471,
+   "intervention_daly": 3794955.961742,
+   "dalys_averted": 2758536.592729,
+   "pct_reduction": 42.092618,
+   "baseline_hi_exceed_pct": 76.328502,
+   "intervention_hi_exceed_pct": 55.555556
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 6553492.554471,
+   "intervention_daly": 5952342.558866,
+   "dalys_averted": 601149.995605,
+   "pct_reduction": 9.172971,
+   "baseline_hi_exceed_pct": 76.328502,
+   "intervention_hi_exceed_pct": 76.328502
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 11681898.739844,
+   "intervention_daly": 6010521.926568,
+   "dalys_averted": 5671376.813277,
+   "pct_reduction": 48.548416,
+   "baseline_hi_exceed_pct": 96.491228,
+   "intervention_hi_exceed_pct": 99.122807
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 11681898.739844,
+   "intervention_daly": 6277531.844919,
+   "dalys_averted": 5404366.894925,
+   "pct_reduction": 46.262744,
+   "baseline_hi_exceed_pct": 96.491228,
+   "intervention_hi_exceed_pct": 93.421053
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 11681898.739844,
+   "intervention_daly": 2508514.333271,
+   "dalys_averted": 9173384.406573,
+   "pct_reduction": 78.526485,
+   "baseline_hi_exceed_pct": 96.491228,
+   "intervention_hi_exceed_pct": 59.210526
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 11681898.739844,
+   "intervention_daly": 7430325.690096,
+   "dalys_averted": 4251573.049748,
+   "pct_reduction": 36.394538,
+   "baseline_hi_exceed_pct": 96.491228,
+   "intervention_hi_exceed_pct": 82.894737
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 11681898.739844,
+   "intervention_daly": 9950425.103351,
+   "dalys_averted": 1731473.636493,
+   "pct_reduction": 14.821851,
+   "baseline_hi_exceed_pct": 96.491228,
+   "intervention_hi_exceed_pct": 95.614035
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 14480179.667058,
+   "intervention_daly": 8053920.319944,
+   "dalys_averted": 6426259.347114,
+   "pct_reduction": 44.379693,
+   "baseline_hi_exceed_pct": 85.85086,
+   "intervention_hi_exceed_pct": 88.33652
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 14480179.667058,
+   "intervention_daly": 7678430.415515,
+   "dalys_averted": 6801749.251543,
+   "pct_reduction": 46.972824,
+   "baseline_hi_exceed_pct": 85.85086,
+   "intervention_hi_exceed_pct": 75.908222
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 14480179.667058,
+   "intervention_daly": 3143612.865127,
+   "dalys_averted": 11336566.801931,
+   "pct_reduction": 78.290236,
+   "baseline_hi_exceed_pct": 85.85086,
+   "intervention_hi_exceed_pct": 53.537285
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 14480179.667058,
+   "intervention_daly": 9251779.603423,
+   "dalys_averted": 5228400.063636,
+   "pct_reduction": 36.107287,
+   "baseline_hi_exceed_pct": 85.85086,
+   "intervention_hi_exceed_pct": 73.996176
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 14480179.667058,
+   "intervention_daly": 12286994.763144,
+   "dalys_averted": 2193184.903914,
+   "pct_reduction": 15.146117,
+   "baseline_hi_exceed_pct": 85.85086,
+   "intervention_hi_exceed_pct": 83.365201
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 22312181.331697,
+   "intervention_daly": 9749653.315241,
+   "dalys_averted": 12562528.016456,
+   "pct_reduction": 56.303451,
+   "baseline_hi_exceed_pct": 89.619377,
+   "intervention_hi_exceed_pct": 92.387543
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 22312181.331697,
+   "intervention_daly": 12499232.101724,
+   "dalys_averted": 9812949.229973,
+   "pct_reduction": 43.980233,
+   "baseline_hi_exceed_pct": 89.619377,
+   "intervention_hi_exceed_pct": 81.314879
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 22312181.331697,
+   "intervention_daly": 4827068.972461,
+   "dalys_averted": 17485112.359236,
+   "pct_reduction": 78.365768,
+   "baseline_hi_exceed_pct": 89.619377,
+   "intervention_hi_exceed_pct": 46.712803
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 22312181.331697,
+   "intervention_daly": 13010862.353343,
+   "dalys_averted": 9301318.978354,
+   "pct_reduction": 41.687179,
+   "baseline_hi_exceed_pct": 89.619377,
+   "intervention_hi_exceed_pct": 66.089965
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 22312181.331697,
+   "intervention_daly": 19209616.403968,
+   "dalys_averted": 3102564.927729,
+   "pct_reduction": 13.905251,
+   "baseline_hi_exceed_pct": 89.619377,
+   "intervention_hi_exceed_pct": 88.581315
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "scenario": "S1_deepen_wells",
+   "baseline_daly": 2692679.023389,
+   "intervention_daly": 1790705.054295,
+   "dalys_averted": 901973.969095,
+   "pct_reduction": 33.49727,
+   "baseline_hi_exceed_pct": 56.557377,
+   "intervention_hi_exceed_pct": 44.262295
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "scenario": "S2_po4_removal",
+   "baseline_daly": 2692679.023389,
+   "intervention_daly": 2000012.525832,
+   "dalys_averted": 692666.497557,
+   "pct_reduction": 25.724065,
+   "baseline_hi_exceed_pct": 56.557377,
+   "intervention_hi_exceed_pct": 45.901639
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "scenario": "S3_multi_treatment",
+   "baseline_daly": 2692679.023389,
+   "intervention_daly": 3870.344542,
+   "dalys_averted": 2688808.678847,
+   "pct_reduction": 99.856264,
+   "baseline_hi_exceed_pct": 56.557377,
+   "intervention_hi_exceed_pct": 13.934426
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "scenario": "S4_seasonal_switch",
+   "baseline_daly": 2692679.023389,
+   "intervention_daly": 1517180.023458,
+   "dalys_averted": 1175498.999931,
+   "pct_reduction": 43.65537,
+   "baseline_hi_exceed_pct": 56.557377,
+   "intervention_hi_exceed_pct": 33.606557
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "scenario": "S5_fertilizer_policy",
+   "baseline_daly": 2692679.023389,
+   "intervention_daly": 2498307.908247,
+   "dalys_averted": 194371.115142,
+   "pct_reduction": 7.218503,
+   "baseline_hi_exceed_pct": 56.557377,
+   "intervention_hi_exceed_pct": 53.278689
+  }
+ ],
+ "ceac": [
+  {
+   "scenario": "S1_deepen_wells",
+   "curve": [
+    {
+     "w": 0.0,
+     "p": 0.0
+    },
+    {
+     "w": 50.0,
+     "p": 0.0
+    },
+    {
+     "w": 100.0,
+     "p": 1.0
+    },
+    {
+     "w": 150.0,
+     "p": 1.0
+    },
+    {
+     "w": 200.0,
+     "p": 1.0
+    },
+    {
+     "w": 250.0,
+     "p": 1.0
+    },
+    {
+     "w": 300.0,
+     "p": 1.0
+    },
+    {
+     "w": 350.0,
+     "p": 1.0
+    },
+    {
+     "w": 400.0,
+     "p": 1.0
+    },
+    {
+     "w": 450.0,
+     "p": 1.0
+    },
+    {
+     "w": 500.0,
+     "p": 1.0
+    },
+    {
+     "w": 550.0,
+     "p": 1.0
+    },
+    {
+     "w": 600.0,
+     "p": 1.0
+    },
+    {
+     "w": 650.0,
+     "p": 1.0
+    },
+    {
+     "w": 700.0,
+     "p": 1.0
+    },
+    {
+     "w": 750.0,
+     "p": 1.0
+    },
+    {
+     "w": 800.0,
+     "p": 1.0
+    },
+    {
+     "w": 850.0,
+     "p": 1.0
+    },
+    {
+     "w": 900.0,
+     "p": 1.0
+    },
+    {
+     "w": 950.0,
+     "p": 1.0
+    },
+    {
+     "w": 1000.0,
+     "p": 1.0
+    },
+    {
+     "w": 1050.0,
+     "p": 1.0
+    },
+    {
+     "w": 1100.0,
+     "p": 1.0
+    },
+    {
+     "w": 1150.0,
+     "p": 1.0
+    },
+    {
+     "w": 1200.0,
+     "p": 1.0
+    },
+    {
+     "w": 1250.0,
+     "p": 1.0
+    },
+    {
+     "w": 1300.0,
+     "p": 1.0
+    },
+    {
+     "w": 1350.0,
+     "p": 1.0
+    },
+    {
+     "w": 1400.0,
+     "p": 1.0
+    },
+    {
+     "w": 1450.0,
+     "p": 1.0
+    },
+    {
+     "w": 1500.0,
+     "p": 1.0
+    },
+    {
+     "w": 1550.0,
+     "p": 1.0
+    },
+    {
+     "w": 1600.0,
+     "p": 1.0
+    },
+    {
+     "w": 1650.0,
+     "p": 1.0
+    },
+    {
+     "w": 1700.0,
+     "p": 1.0
+    },
+    {
+     "w": 1750.0,
+     "p": 1.0
+    },
+    {
+     "w": 1800.0,
+     "p": 1.0
+    },
+    {
+     "w": 1850.0,
+     "p": 1.0
+    },
+    {
+     "w": 1900.0,
+     "p": 1.0
+    },
+    {
+     "w": 1950.0,
+     "p": 1.0
+    },
+    {
+     "w": 2000.0,
+     "p": 1.0
+    },
+    {
+     "w": 2050.0,
+     "p": 1.0
+    },
+    {
+     "w": 2100.0,
+     "p": 1.0
+    },
+    {
+     "w": 2150.0,
+     "p": 1.0
+    },
+    {
+     "w": 2200.0,
+     "p": 1.0
+    },
+    {
+     "w": 2250.0,
+     "p": 1.0
+    },
+    {
+     "w": 2300.0,
+     "p": 1.0
+    },
+    {
+     "w": 2350.0,
+     "p": 1.0
+    },
+    {
+     "w": 2400.0,
+     "p": 1.0
+    },
+    {
+     "w": 2450.0,
+     "p": 1.0
+    },
+    {
+     "w": 2500.0,
+     "p": 1.0
+    },
+    {
+     "w": 2550.0,
+     "p": 1.0
+    },
+    {
+     "w": 2600.0,
+     "p": 1.0
+    },
+    {
+     "w": 2650.0,
+     "p": 1.0
+    },
+    {
+     "w": 2700.0,
+     "p": 1.0
+    },
+    {
+     "w": 2750.0,
+     "p": 1.0
+    },
+    {
+     "w": 2800.0,
+     "p": 1.0
+    },
+    {
+     "w": 2850.0,
+     "p": 1.0
+    },
+    {
+     "w": 2900.0,
+     "p": 1.0
+    },
+    {
+     "w": 2950.0,
+     "p": 1.0
+    },
+    {
+     "w": 3000.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "scenario": "S2_po4_removal",
+   "curve": [
+    {
+     "w": 0.0,
+     "p": 0.0
+    },
+    {
+     "w": 50.0,
+     "p": 1.0
+    },
+    {
+     "w": 100.0,
+     "p": 1.0
+    },
+    {
+     "w": 150.0,
+     "p": 1.0
+    },
+    {
+     "w": 200.0,
+     "p": 1.0
+    },
+    {
+     "w": 250.0,
+     "p": 1.0
+    },
+    {
+     "w": 300.0,
+     "p": 1.0
+    },
+    {
+     "w": 350.0,
+     "p": 1.0
+    },
+    {
+     "w": 400.0,
+     "p": 1.0
+    },
+    {
+     "w": 450.0,
+     "p": 1.0
+    },
+    {
+     "w": 500.0,
+     "p": 1.0
+    },
+    {
+     "w": 550.0,
+     "p": 1.0
+    },
+    {
+     "w": 600.0,
+     "p": 1.0
+    },
+    {
+     "w": 650.0,
+     "p": 1.0
+    },
+    {
+     "w": 700.0,
+     "p": 1.0
+    },
+    {
+     "w": 750.0,
+     "p": 1.0
+    },
+    {
+     "w": 800.0,
+     "p": 1.0
+    },
+    {
+     "w": 850.0,
+     "p": 1.0
+    },
+    {
+     "w": 900.0,
+     "p": 1.0
+    },
+    {
+     "w": 950.0,
+     "p": 1.0
+    },
+    {
+     "w": 1000.0,
+     "p": 1.0
+    },
+    {
+     "w": 1050.0,
+     "p": 1.0
+    },
+    {
+     "w": 1100.0,
+     "p": 1.0
+    },
+    {
+     "w": 1150.0,
+     "p": 1.0
+    },
+    {
+     "w": 1200.0,
+     "p": 1.0
+    },
+    {
+     "w": 1250.0,
+     "p": 1.0
+    },
+    {
+     "w": 1300.0,
+     "p": 1.0
+    },
+    {
+     "w": 1350.0,
+     "p": 1.0
+    },
+    {
+     "w": 1400.0,
+     "p": 1.0
+    },
+    {
+     "w": 1450.0,
+     "p": 1.0
+    },
+    {
+     "w": 1500.0,
+     "p": 1.0
+    },
+    {
+     "w": 1550.0,
+     "p": 1.0
+    },
+    {
+     "w": 1600.0,
+     "p": 1.0
+    },
+    {
+     "w": 1650.0,
+     "p": 1.0
+    },
+    {
+     "w": 1700.0,
+     "p": 1.0
+    },
+    {
+     "w": 1750.0,
+     "p": 1.0
+    },
+    {
+     "w": 1800.0,
+     "p": 1.0
+    },
+    {
+     "w": 1850.0,
+     "p": 1.0
+    },
+    {
+     "w": 1900.0,
+     "p": 1.0
+    },
+    {
+     "w": 1950.0,
+     "p": 1.0
+    },
+    {
+     "w": 2000.0,
+     "p": 1.0
+    },
+    {
+     "w": 2050.0,
+     "p": 1.0
+    },
+    {
+     "w": 2100.0,
+     "p": 1.0
+    },
+    {
+     "w": 2150.0,
+     "p": 1.0
+    },
+    {
+     "w": 2200.0,
+     "p": 1.0
+    },
+    {
+     "w": 2250.0,
+     "p": 1.0
+    },
+    {
+     "w": 2300.0,
+     "p": 1.0
+    },
+    {
+     "w": 2350.0,
+     "p": 1.0
+    },
+    {
+     "w": 2400.0,
+     "p": 1.0
+    },
+    {
+     "w": 2450.0,
+     "p": 1.0
+    },
+    {
+     "w": 2500.0,
+     "p": 1.0
+    },
+    {
+     "w": 2550.0,
+     "p": 1.0
+    },
+    {
+     "w": 2600.0,
+     "p": 1.0
+    },
+    {
+     "w": 2650.0,
+     "p": 1.0
+    },
+    {
+     "w": 2700.0,
+     "p": 1.0
+    },
+    {
+     "w": 2750.0,
+     "p": 1.0
+    },
+    {
+     "w": 2800.0,
+     "p": 1.0
+    },
+    {
+     "w": 2850.0,
+     "p": 1.0
+    },
+    {
+     "w": 2900.0,
+     "p": 1.0
+    },
+    {
+     "w": 2950.0,
+     "p": 1.0
+    },
+    {
+     "w": 3000.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "scenario": "S3_multi_treatment",
+   "curve": [
+    {
+     "w": 0.0,
+     "p": 0.0
+    },
+    {
+     "w": 50.0,
+     "p": 1.0
+    },
+    {
+     "w": 100.0,
+     "p": 1.0
+    },
+    {
+     "w": 150.0,
+     "p": 1.0
+    },
+    {
+     "w": 200.0,
+     "p": 1.0
+    },
+    {
+     "w": 250.0,
+     "p": 1.0
+    },
+    {
+     "w": 300.0,
+     "p": 1.0
+    },
+    {
+     "w": 350.0,
+     "p": 1.0
+    },
+    {
+     "w": 400.0,
+     "p": 1.0
+    },
+    {
+     "w": 450.0,
+     "p": 1.0
+    },
+    {
+     "w": 500.0,
+     "p": 1.0
+    },
+    {
+     "w": 550.0,
+     "p": 1.0
+    },
+    {
+     "w": 600.0,
+     "p": 1.0
+    },
+    {
+     "w": 650.0,
+     "p": 1.0
+    },
+    {
+     "w": 700.0,
+     "p": 1.0
+    },
+    {
+     "w": 750.0,
+     "p": 1.0
+    },
+    {
+     "w": 800.0,
+     "p": 1.0
+    },
+    {
+     "w": 850.0,
+     "p": 1.0
+    },
+    {
+     "w": 900.0,
+     "p": 1.0
+    },
+    {
+     "w": 950.0,
+     "p": 1.0
+    },
+    {
+     "w": 1000.0,
+     "p": 1.0
+    },
+    {
+     "w": 1050.0,
+     "p": 1.0
+    },
+    {
+     "w": 1100.0,
+     "p": 1.0
+    },
+    {
+     "w": 1150.0,
+     "p": 1.0
+    },
+    {
+     "w": 1200.0,
+     "p": 1.0
+    },
+    {
+     "w": 1250.0,
+     "p": 1.0
+    },
+    {
+     "w": 1300.0,
+     "p": 1.0
+    },
+    {
+     "w": 1350.0,
+     "p": 1.0
+    },
+    {
+     "w": 1400.0,
+     "p": 1.0
+    },
+    {
+     "w": 1450.0,
+     "p": 1.0
+    },
+    {
+     "w": 1500.0,
+     "p": 1.0
+    },
+    {
+     "w": 1550.0,
+     "p": 1.0
+    },
+    {
+     "w": 1600.0,
+     "p": 1.0
+    },
+    {
+     "w": 1650.0,
+     "p": 1.0
+    },
+    {
+     "w": 1700.0,
+     "p": 1.0
+    },
+    {
+     "w": 1750.0,
+     "p": 1.0
+    },
+    {
+     "w": 1800.0,
+     "p": 1.0
+    },
+    {
+     "w": 1850.0,
+     "p": 1.0
+    },
+    {
+     "w": 1900.0,
+     "p": 1.0
+    },
+    {
+     "w": 1950.0,
+     "p": 1.0
+    },
+    {
+     "w": 2000.0,
+     "p": 1.0
+    },
+    {
+     "w": 2050.0,
+     "p": 1.0
+    },
+    {
+     "w": 2100.0,
+     "p": 1.0
+    },
+    {
+     "w": 2150.0,
+     "p": 1.0
+    },
+    {
+     "w": 2200.0,
+     "p": 1.0
+    },
+    {
+     "w": 2250.0,
+     "p": 1.0
+    },
+    {
+     "w": 2300.0,
+     "p": 1.0
+    },
+    {
+     "w": 2350.0,
+     "p": 1.0
+    },
+    {
+     "w": 2400.0,
+     "p": 1.0
+    },
+    {
+     "w": 2450.0,
+     "p": 1.0
+    },
+    {
+     "w": 2500.0,
+     "p": 1.0
+    },
+    {
+     "w": 2550.0,
+     "p": 1.0
+    },
+    {
+     "w": 2600.0,
+     "p": 1.0
+    },
+    {
+     "w": 2650.0,
+     "p": 1.0
+    },
+    {
+     "w": 2700.0,
+     "p": 1.0
+    },
+    {
+     "w": 2750.0,
+     "p": 1.0
+    },
+    {
+     "w": 2800.0,
+     "p": 1.0
+    },
+    {
+     "w": 2850.0,
+     "p": 1.0
+    },
+    {
+     "w": 2900.0,
+     "p": 1.0
+    },
+    {
+     "w": 2950.0,
+     "p": 1.0
+    },
+    {
+     "w": 3000.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "scenario": "S4_seasonal_switch",
+   "curve": [
+    {
+     "w": 0.0,
+     "p": 0.0
+    },
+    {
+     "w": 50.0,
+     "p": 1.0
+    },
+    {
+     "w": 100.0,
+     "p": 1.0
+    },
+    {
+     "w": 150.0,
+     "p": 1.0
+    },
+    {
+     "w": 200.0,
+     "p": 1.0
+    },
+    {
+     "w": 250.0,
+     "p": 1.0
+    },
+    {
+     "w": 300.0,
+     "p": 1.0
+    },
+    {
+     "w": 350.0,
+     "p": 1.0
+    },
+    {
+     "w": 400.0,
+     "p": 1.0
+    },
+    {
+     "w": 450.0,
+     "p": 1.0
+    },
+    {
+     "w": 500.0,
+     "p": 1.0
+    },
+    {
+     "w": 550.0,
+     "p": 1.0
+    },
+    {
+     "w": 600.0,
+     "p": 1.0
+    },
+    {
+     "w": 650.0,
+     "p": 1.0
+    },
+    {
+     "w": 700.0,
+     "p": 1.0
+    },
+    {
+     "w": 750.0,
+     "p": 1.0
+    },
+    {
+     "w": 800.0,
+     "p": 1.0
+    },
+    {
+     "w": 850.0,
+     "p": 1.0
+    },
+    {
+     "w": 900.0,
+     "p": 1.0
+    },
+    {
+     "w": 950.0,
+     "p": 1.0
+    },
+    {
+     "w": 1000.0,
+     "p": 1.0
+    },
+    {
+     "w": 1050.0,
+     "p": 1.0
+    },
+    {
+     "w": 1100.0,
+     "p": 1.0
+    },
+    {
+     "w": 1150.0,
+     "p": 1.0
+    },
+    {
+     "w": 1200.0,
+     "p": 1.0
+    },
+    {
+     "w": 1250.0,
+     "p": 1.0
+    },
+    {
+     "w": 1300.0,
+     "p": 1.0
+    },
+    {
+     "w": 1350.0,
+     "p": 1.0
+    },
+    {
+     "w": 1400.0,
+     "p": 1.0
+    },
+    {
+     "w": 1450.0,
+     "p": 1.0
+    },
+    {
+     "w": 1500.0,
+     "p": 1.0
+    },
+    {
+     "w": 1550.0,
+     "p": 1.0
+    },
+    {
+     "w": 1600.0,
+     "p": 1.0
+    },
+    {
+     "w": 1650.0,
+     "p": 1.0
+    },
+    {
+     "w": 1700.0,
+     "p": 1.0
+    },
+    {
+     "w": 1750.0,
+     "p": 1.0
+    },
+    {
+     "w": 1800.0,
+     "p": 1.0
+    },
+    {
+     "w": 1850.0,
+     "p": 1.0
+    },
+    {
+     "w": 1900.0,
+     "p": 1.0
+    },
+    {
+     "w": 1950.0,
+     "p": 1.0
+    },
+    {
+     "w": 2000.0,
+     "p": 1.0
+    },
+    {
+     "w": 2050.0,
+     "p": 1.0
+    },
+    {
+     "w": 2100.0,
+     "p": 1.0
+    },
+    {
+     "w": 2150.0,
+     "p": 1.0
+    },
+    {
+     "w": 2200.0,
+     "p": 1.0
+    },
+    {
+     "w": 2250.0,
+     "p": 1.0
+    },
+    {
+     "w": 2300.0,
+     "p": 1.0
+    },
+    {
+     "w": 2350.0,
+     "p": 1.0
+    },
+    {
+     "w": 2400.0,
+     "p": 1.0
+    },
+    {
+     "w": 2450.0,
+     "p": 1.0
+    },
+    {
+     "w": 2500.0,
+     "p": 1.0
+    },
+    {
+     "w": 2550.0,
+     "p": 1.0
+    },
+    {
+     "w": 2600.0,
+     "p": 1.0
+    },
+    {
+     "w": 2650.0,
+     "p": 1.0
+    },
+    {
+     "w": 2700.0,
+     "p": 1.0
+    },
+    {
+     "w": 2750.0,
+     "p": 1.0
+    },
+    {
+     "w": 2800.0,
+     "p": 1.0
+    },
+    {
+     "w": 2850.0,
+     "p": 1.0
+    },
+    {
+     "w": 2900.0,
+     "p": 1.0
+    },
+    {
+     "w": 2950.0,
+     "p": 1.0
+    },
+    {
+     "w": 3000.0,
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "scenario": "S5_fertilizer_policy",
+   "curve": [
+    {
+     "w": 0.0,
+     "p": 0.0
+    },
+    {
+     "w": 50.0,
+     "p": 0.999
+    },
+    {
+     "w": 100.0,
+     "p": 1.0
+    },
+    {
+     "w": 150.0,
+     "p": 1.0
+    },
+    {
+     "w": 200.0,
+     "p": 1.0
+    },
+    {
+     "w": 250.0,
+     "p": 1.0
+    },
+    {
+     "w": 300.0,
+     "p": 1.0
+    },
+    {
+     "w": 350.0,
+     "p": 1.0
+    },
+    {
+     "w": 400.0,
+     "p": 1.0
+    },
+    {
+     "w": 450.0,
+     "p": 1.0
+    },
+    {
+     "w": 500.0,
+     "p": 1.0
+    },
+    {
+     "w": 550.0,
+     "p": 1.0
+    },
+    {
+     "w": 600.0,
+     "p": 1.0
+    },
+    {
+     "w": 650.0,
+     "p": 1.0
+    },
+    {
+     "w": 700.0,
+     "p": 1.0
+    },
+    {
+     "w": 750.0,
+     "p": 1.0
+    },
+    {
+     "w": 800.0,
+     "p": 1.0
+    },
+    {
+     "w": 850.0,
+     "p": 1.0
+    },
+    {
+     "w": 900.0,
+     "p": 1.0
+    },
+    {
+     "w": 950.0,
+     "p": 1.0
+    },
+    {
+     "w": 1000.0,
+     "p": 1.0
+    },
+    {
+     "w": 1050.0,
+     "p": 1.0
+    },
+    {
+     "w": 1100.0,
+     "p": 1.0
+    },
+    {
+     "w": 1150.0,
+     "p": 1.0
+    },
+    {
+     "w": 1200.0,
+     "p": 1.0
+    },
+    {
+     "w": 1250.0,
+     "p": 1.0
+    },
+    {
+     "w": 1300.0,
+     "p": 1.0
+    },
+    {
+     "w": 1350.0,
+     "p": 1.0
+    },
+    {
+     "w": 1400.0,
+     "p": 1.0
+    },
+    {
+     "w": 1450.0,
+     "p": 1.0
+    },
+    {
+     "w": 1500.0,
+     "p": 1.0
+    },
+    {
+     "w": 1550.0,
+     "p": 1.0
+    },
+    {
+     "w": 1600.0,
+     "p": 1.0
+    },
+    {
+     "w": 1650.0,
+     "p": 1.0
+    },
+    {
+     "w": 1700.0,
+     "p": 1.0
+    },
+    {
+     "w": 1750.0,
+     "p": 1.0
+    },
+    {
+     "w": 1800.0,
+     "p": 1.0
+    },
+    {
+     "w": 1850.0,
+     "p": 1.0
+    },
+    {
+     "w": 1900.0,
+     "p": 1.0
+    },
+    {
+     "w": 1950.0,
+     "p": 1.0
+    },
+    {
+     "w": 2000.0,
+     "p": 1.0
+    },
+    {
+     "w": 2050.0,
+     "p": 1.0
+    },
+    {
+     "w": 2100.0,
+     "p": 1.0
+    },
+    {
+     "w": 2150.0,
+     "p": 1.0
+    },
+    {
+     "w": 2200.0,
+     "p": 1.0
+    },
+    {
+     "w": 2250.0,
+     "p": 1.0
+    },
+    {
+     "w": 2300.0,
+     "p": 1.0
+    },
+    {
+     "w": 2350.0,
+     "p": 1.0
+    },
+    {
+     "w": 2400.0,
+     "p": 1.0
+    },
+    {
+     "w": 2450.0,
+     "p": 1.0
+    },
+    {
+     "w": 2500.0,
+     "p": 1.0
+    },
+    {
+     "w": 2550.0,
+     "p": 1.0
+    },
+    {
+     "w": 2600.0,
+     "p": 1.0
+    },
+    {
+     "w": 2650.0,
+     "p": 1.0
+    },
+    {
+     "w": 2700.0,
+     "p": 1.0
+    },
+    {
+     "w": 2750.0,
+     "p": 1.0
+    },
+    {
+     "w": 2800.0,
+     "p": 1.0
+    },
+    {
+     "w": 2850.0,
+     "p": 1.0
+    },
+    {
+     "w": 2900.0,
+     "p": 1.0
+    },
+    {
+     "w": 2950.0,
+     "p": 1.0
+    },
+    {
+     "w": 3000.0,
+     "p": 1.0
+    }
+   ]
+  }
+ ],
+ "gdp": 2500,
+ "gdp3": 7500
+}

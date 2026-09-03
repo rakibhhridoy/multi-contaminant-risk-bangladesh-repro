@@ -1,0 +1,81 @@
+{
+ "contributions": [
+  {
+   "contaminant": "As",
+   "pct": 36.589741
+  },
+  {
+   "contaminant": "Mn2+",
+   "pct": 32.085814
+  },
+  {
+   "contaminant": "Fe2+",
+   "pct": 6.086677
+  },
+  {
+   "contaminant": "Cu2+",
+   "pct": 3.344907
+  },
+  {
+   "contaminant": "NO3-",
+   "pct": 1.921946
+  }
+ ],
+ "zones": [
+  {
+   "zone": "Barind_Tract",
+   "daly": 64048.723078,
+   "daly_as": 13665.791617
+  },
+  {
+   "zone": "Northern_Terrace",
+   "daly": 82720.72024,
+   "daly_as": 21463.959782
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "daly": 214961.222482,
+   "daly_as": 56534.853152
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "daly": 161648.040149,
+   "daly_as": 112967.451524
+  },
+  {
+   "zone": "GBM_Delta",
+   "daly": 141524.184687,
+   "daly_as": 98564.291551
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "daly": 234576.161528,
+   "daly_as": 152825.961882
+  },
+  {
+   "zone": "Eastern_Hills",
+   "daly": 42404.565445,
+   "daly_as": 6295.346363
+  }
+ ],
+ "total": 941883.61761,
+ "variance": [
+  {
+   "source": "transfer function",
+   "pct": 41
+  },
+  {
+   "source": "toxicity parameters",
+   "pct": 39
+  },
+  {
+   "source": "exposure parameters",
+   "pct": 21
+  },
+  {
+   "source": "climate scenario",
+   "pct": 1,
+   "lt": true
+  }
+ ]
+}

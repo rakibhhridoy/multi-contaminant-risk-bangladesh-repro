@@ -28,11 +28,15 @@ np.random.seed(RANDOM_STATE)
 
 # ─── WHO/EPA THRESHOLDS ────────────────────────────────────────────────────────
 # Health-based thresholds for joint exceedance
+# Current WHO HEALTH-BASED values (revised 2026-09-01 for the JHMA revision,
+# reviewer comments R1.4 and R2.7). Previously Mn used the 2011 value 0.4 mg/L,
+# superseded by the 2021 background document, and Fe used 0.3 mg/L, which is an
+# acceptability (staining) value and not health-based.
 THRESHOLDS = {
-    'As':   10.0,    # µg/L WHO guideline
-    'Mn2+': 0.4,     # mg/L WHO guideline
-    'Fe2+': 0.3,     # mg/L WHO guideline (aesthetic + health)
-    'Cr3+': 0.05,    # mg/L WHO guideline
+    'As':   10.0,    # µg/L  WHO guideline value
+    'Mn2+': 0.08,    # mg/L  WHO 2021 provisional guideline value (was 0.4, 2011)
+    'Fe2+': 2.0,     # mg/L  WHO provisional health-based value (was 0.3, aesthetic)
+    'Cr3+': 0.05,    # mg/L  WHO guideline value
 }
 
 # Core contaminant set for copula analysis

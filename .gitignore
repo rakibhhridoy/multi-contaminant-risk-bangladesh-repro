@@ -29,3 +29,10 @@ data/external/grace_fo/*
 # WorldPop raster and PANGAEA validation cohorts are small enough to ship
 !data/external/worldpop/
 !data/external/validation/
+
+# D3 figure pipeline: dependencies and rendered artwork are rebuilt by render.sh.
+# figures_d3/data/*.json IS tracked - it is the auditable Python->D3 contract.
+figures_d3/node_modules/
+figures_d3/svg/
+figures_d3/pdf/
+figures_d3/png/

@@ -1,0 +1,424 @@
+{
+ "rows": [
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 26.953966
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 40.191078
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": 7.172605
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": 10.800857
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 4.927571
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 8.64951
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": 0.023166
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": 2.528601
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 7.721071
+  },
+  {
+   "zone": "Barind_Tract",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 12.179355
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 170.772886
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 237.987179
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -7.545628
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -9.441326
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 10.564858
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 16.402546
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": -17.465298
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": -21.52352
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": -0.834179
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 0.413205
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 857.154872
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 1181.977587
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -7.971523
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -10.027066
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": -12.603788
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": -15.461605
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": -6.839167
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": -6.909259
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 9.698043
+  },
+  {
+   "zone": "Eastern_Hills",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 14.898312
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 32.298102
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 47.54094
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -4.944011
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -5.863287
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 9.561818
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 15.023052
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": -7.3875
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": -7.663388
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 2.382435
+  },
+  {
+   "zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 4.837057
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 19.839359
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 30.406263
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -22.09625
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -29.452994
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": -1.2215
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 0.19261
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": 2.281649
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": 5.634722
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 17.286127
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 25.334306
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 98.383096
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 138.428524
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -5.60721
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -6.775394
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 7.112318
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 11.654222
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": 9.154967
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": 15.08769
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 12.880096
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 19.274632
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 76.848948
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 108.812319
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -0.912557
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -0.318774
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 5.458945
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 9.380316
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": -7.135709
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": -7.317098
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": -2.163929
+  },
+  {
+   "zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": -1.415619
+  }
+ ]
+}

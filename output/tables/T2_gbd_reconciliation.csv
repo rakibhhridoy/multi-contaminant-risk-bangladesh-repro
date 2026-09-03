@@ -1,0 +1,5 @@
+quantity,multi,as_only
+Full endpoint (main text),941900.0,462300.0
+GBD-restricted (skin+cancer),130800.0,66600.0
+  YLL component (cancer),,5500.0
+  YLD component (skin),,61000.0

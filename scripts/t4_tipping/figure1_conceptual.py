@@ -166,8 +166,8 @@ def panel_C(ax):
                               'Field kit \\$5–15/test',
                               'Sample transport',
                               'Days–weeks']):
-        ax.text(0.7, 7.7 - i*0.65, '•', fontsize=9, color=CRIMSON, va='center')
-        ax.text(1.0, 7.7 - i*0.65, line, fontsize=8, va='center')
+        ax.text(0.6, 7.7 - i*0.65, '•', fontsize=9, color=CRIMSON, va='center')
+        ax.text(0.9, 7.7 - i*0.65, line, fontsize=7.5, va='center')
     ax.text(2.3, 4.55, r'$\sim$\$5–15 / test', ha='center', fontsize=10,
             fontweight='bold', color=CRIMSON)
     ax.text(2.3, 3.85, 'low rural coverage', ha='center', fontsize=7.5,
@@ -190,8 +190,8 @@ def panel_C(ax):
                               'Field kit \\$0.30–1/test',
                               'In situ, no transport',
                               'Minutes']):
-        ax.text(6.1, 7.7 - i*0.65, '•', fontsize=9, color=STEEL, va='center')
-        ax.text(6.4, 7.7 - i*0.65, line, fontsize=8, va='center')
+        ax.text(6.0, 7.7 - i*0.65, '•', fontsize=9, color=STEEL, va='center')
+        ax.text(6.3, 7.7 - i*0.65, line, fontsize=7.5, va='center')
     ax.text(7.7, 4.55, r'$\sim$10$\times$ cheaper', ha='center', fontsize=10,
             fontweight='bold', color=STEEL)
     ax.text(7.7, 3.85, 'full WASH network', ha='center', fontsize=7.5,

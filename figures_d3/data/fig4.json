@@ -1,0 +1,1295 @@
+{
+ "sensitivity": [
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.079402,
+   "significant": true,
+   "n_pairs": 26
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.003989,
+   "significant": false,
+   "n_pairs": 26
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.000814,
+   "significant": false,
+   "n_pairs": 26
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -8e-05,
+   "significant": true,
+   "n_pairs": 26
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.016667,
+   "significant": true,
+   "n_pairs": 26
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.062879,
+   "significant": true,
+   "n_pairs": 18
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.002906,
+   "significant": false,
+   "n_pairs": 18
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.123677,
+   "significant": true,
+   "n_pairs": 18
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -5.8e-05,
+   "significant": false,
+   "n_pairs": 18
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.0,
+   "significant": false,
+   "n_pairs": 18
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.072295,
+   "significant": false,
+   "n_pairs": 62
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.003095,
+   "significant": false,
+   "n_pairs": 62
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.001638,
+   "significant": false,
+   "n_pairs": 62
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -8e-05,
+   "significant": false,
+   "n_pairs": 62
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.006667,
+   "significant": false,
+   "n_pairs": 62
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.042796,
+   "significant": false,
+   "n_pairs": 14
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": 0.00298,
+   "significant": false,
+   "n_pairs": 14
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.007345,
+   "significant": false,
+   "n_pairs": 14
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.000139,
+   "significant": false,
+   "n_pairs": 14
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.013333,
+   "significant": false,
+   "n_pairs": 14
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.144674,
+   "significant": true,
+   "n_pairs": 32
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.006139,
+   "significant": false,
+   "n_pairs": 32
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.004858,
+   "significant": false,
+   "n_pairs": 32
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 1.2e-05,
+   "significant": false,
+   "n_pairs": 32
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.006667,
+   "significant": false,
+   "n_pairs": 32
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.073022,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.004713,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.00381,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 7e-06,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.0,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.021169,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.007477,
+   "significant": true,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.018399,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 1e-05,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.003333,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.05713,
+   "significant": true,
+   "n_pairs": 35
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.007941,
+   "significant": true,
+   "n_pairs": 35
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.01481,
+   "significant": false,
+   "n_pairs": 35
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -7e-05,
+   "significant": false,
+   "n_pairs": 35
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.003333,
+   "significant": false,
+   "n_pairs": 35
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "As",
+   "sensitivity_per_pct": -0.000267,
+   "significant": false,
+   "n_pairs": 17
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.004389,
+   "significant": false,
+   "n_pairs": 17
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.062799,
+   "significant": false,
+   "n_pairs": 17
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.000103,
+   "significant": false,
+   "n_pairs": 17
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.003333,
+   "significant": false,
+   "n_pairs": 17
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.006476,
+   "significant": false,
+   "n_pairs": 66
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.004182,
+   "significant": false,
+   "n_pairs": 66
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.003743,
+   "significant": false,
+   "n_pairs": 66
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -5e-05,
+   "significant": true,
+   "n_pairs": 66
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.015,
+   "significant": true,
+   "n_pairs": 66
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": -0.000485,
+   "significant": false,
+   "n_pairs": 36
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.007633,
+   "significant": true,
+   "n_pairs": 36
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.039605,
+   "significant": true,
+   "n_pairs": 36
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -9.8e-05,
+   "significant": true,
+   "n_pairs": 36
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.0,
+   "significant": false,
+   "n_pairs": 36
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.46657,
+   "significant": true,
+   "n_pairs": 41
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": 0.000317,
+   "significant": false,
+   "n_pairs": 41
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.01368,
+   "significant": false,
+   "n_pairs": 41
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.000393,
+   "significant": true,
+   "n_pairs": 41
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.006667,
+   "significant": false,
+   "n_pairs": 41
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.086129,
+   "significant": true,
+   "n_pairs": 20
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.003631,
+   "significant": false,
+   "n_pairs": 20
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.044971,
+   "significant": true,
+   "n_pairs": 20
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -1.3e-05,
+   "significant": false,
+   "n_pairs": 20
+  },
+  {
+   "depth_zone": "Intermediate",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.008333,
+   "significant": false,
+   "n_pairs": 20
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.083476,
+   "significant": false,
+   "n_pairs": 15
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.005391,
+   "significant": false,
+   "n_pairs": 15
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.025251,
+   "significant": false,
+   "n_pairs": 15
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -1.7e-05,
+   "significant": false,
+   "n_pairs": 15
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.023333,
+   "significant": false,
+   "n_pairs": 15
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.071395,
+   "significant": true,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.000415,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.033649,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -2.5e-05,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Eastern_Hills",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.01,
+   "significant": true,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.085058,
+   "significant": false,
+   "n_pairs": 100
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.002749,
+   "significant": false,
+   "n_pairs": 100
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.00796,
+   "significant": false,
+   "n_pairs": 100
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.000153,
+   "significant": true,
+   "n_pairs": 100
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.006667,
+   "significant": false,
+   "n_pairs": 100
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.08479,
+   "significant": false,
+   "n_pairs": 31
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.002074,
+   "significant": false,
+   "n_pairs": 31
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.003358,
+   "significant": false,
+   "n_pairs": 31
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.000193,
+   "significant": true,
+   "n_pairs": 31
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.006667,
+   "significant": false,
+   "n_pairs": 31
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.2105,
+   "significant": true,
+   "n_pairs": 42
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": 0.005977,
+   "significant": true,
+   "n_pairs": 42
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.009758,
+   "significant": false,
+   "n_pairs": 42
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -0.0002,
+   "significant": true,
+   "n_pairs": 42
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.008333,
+   "significant": false,
+   "n_pairs": 42
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.088107,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.004884,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.015108,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -6.7e-05,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Medium_Deep",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.01,
+   "significant": false,
+   "n_pairs": 9
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "As",
+   "sensitivity_per_pct": -0.000303,
+   "significant": false,
+   "n_pairs": 52
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.002218,
+   "significant": false,
+   "n_pairs": 52
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.002654,
+   "significant": false,
+   "n_pairs": 52
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 4.1e-05,
+   "significant": false,
+   "n_pairs": 52
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Barind_Tract",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.001667,
+   "significant": false,
+   "n_pairs": 52
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.052318,
+   "significant": true,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.005863,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.000632,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 2.9e-05,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Brahmaputra_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.003333,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.127617,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.00258,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.005779,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": 0.00015,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "GBM_Delta",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.001667,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.03331,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.004253,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.038759,
+   "significant": true,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -8.3e-05,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Ganges_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.01,
+   "significant": false,
+   "n_pairs": 29
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "As",
+   "sensitivity_per_pct": -0.081651,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.00172,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": 0.001306,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -5.3e-05,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Meghna_Floodplain",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": 0.013333,
+   "significant": false,
+   "n_pairs": 19
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "As",
+   "sensitivity_per_pct": 0.054765,
+   "significant": true,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Mn2+",
+   "sensitivity_per_pct": -0.003646,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Fe2+",
+   "sensitivity_per_pct": -0.023622,
+   "significant": true,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "Cr3+",
+   "sensitivity_per_pct": -8e-06,
+   "significant": false,
+   "n_pairs": 22
+  },
+  {
+   "depth_zone": "Shallow",
+   "phys_zone": "Northern_Terrace",
+   "contaminant": "NO3-",
+   "sensitivity_per_pct": -0.016667,
+   "significant": false,
+   "n_pairs": 22
+  }
+ ],
+ "crossings": [
+  {
+   "phys_zone": "Barind_Tract",
+   "depth_zone": "Intermediate",
+   "base": 1.0008,
+   "med": 1.602015,
+   "lo": 1.602015,
+   "hi": 1.602015
+  },
+  {
+   "phys_zone": "Barind_Tract",
+   "depth_zone": "Shallow",
+   "base": 0.8106,
+   "med": 0.975223,
+   "lo": 0.975223,
+   "hi": 0.975223
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "depth_zone": "Deep",
+   "base": 0.47725,
+   "med": 2.044252,
+   "lo": 2.044252,
+   "hi": 2.044252
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "depth_zone": "Intermediate",
+   "base": 1.0633,
+   "med": 2.341956,
+   "lo": 2.341956,
+   "hi": 2.341956
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "depth_zone": "Medium_Deep",
+   "base": 0.6407,
+   "med": 2.317292,
+   "lo": 2.317292,
+   "hi": 2.317292
+  },
+  {
+   "phys_zone": "Brahmaputra_Floodplain",
+   "depth_zone": "Shallow",
+   "base": 0.5,
+   "med": 1.571466,
+   "lo": 1.571466,
+   "hi": 1.571466
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "depth_zone": "Deep",
+   "base": 0.10005,
+   "med": 1.282619,
+   "lo": 1.282619,
+   "hi": 1.282619
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "depth_zone": "Intermediate",
+   "base": 0.2156,
+   "med": 0.25595,
+   "lo": 0.25595,
+   "hi": 0.25595
+  },
+  {
+   "phys_zone": "Eastern_Hills",
+   "depth_zone": "Medium_Deep",
+   "base": 0.0942,
+   "med": 1.432862,
+   "lo": 1.432862,
+   "hi": 1.432862
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "depth_zone": "Deep",
+   "base": 3.5416,
+   "med": 5.620832,
+   "lo": 5.620832,
+   "hi": 5.620832
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "depth_zone": "Intermediate",
+   "base": 20.466,
+   "med": 24.883484,
+   "lo": 24.883484,
+   "hi": 24.883484
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "depth_zone": "Medium_Deep",
+   "base": 3.1667,
+   "med": 5.402985,
+   "lo": 5.402985,
+   "hi": 5.402985
+  },
+  {
+   "phys_zone": "GBM_Delta",
+   "depth_zone": "Shallow",
+   "base": 15.335,
+   "med": 20.912807,
+   "lo": 20.912807,
+   "hi": 20.912807
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "depth_zone": "Deep",
+   "base": 10.1645,
+   "med": 13.089602,
+   "lo": 13.089602,
+   "hi": 13.089602
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "depth_zone": "Intermediate",
+   "base": 4.42655,
+   "med": 5.347166,
+   "lo": 5.347166,
+   "hi": 5.347166
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "depth_zone": "Medium_Deep",
+   "base": 2.9532,
+   "med": 5.139684,
+   "lo": 5.139684,
+   "hi": 5.139684
+  },
+  {
+   "phys_zone": "Ganges_Floodplain",
+   "depth_zone": "Shallow",
+   "base": 5.5763,
+   "med": 7.362662,
+   "lo": 7.362662,
+   "hi": 7.362662
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "depth_zone": "Deep",
+   "base": 2.1632,
+   "med": 5.290025,
+   "lo": 5.290025,
+   "hi": 5.290025
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "depth_zone": "Intermediate",
+   "base": 7.7431,
+   "med": 17.988056,
+   "lo": 17.988056,
+   "hi": 17.988056
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "depth_zone": "Medium_Deep",
+   "base": 2.9352,
+   "med": 7.440139,
+   "lo": 7.440139,
+   "hi": 7.440139
+  },
+  {
+   "phys_zone": "Meghna_Floodplain",
+   "depth_zone": "Shallow",
+   "base": 22.421,
+   "med": 25.621085,
+   "lo": 25.621085,
+   "hi": 25.621085
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "depth_zone": "Deep",
+   "base": 1.7324,
+   "med": 3.445127,
+   "lo": 3.445127,
+   "hi": 3.445127
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "depth_zone": "Intermediate",
+   "base": 1.5482,
+   "med": 3.464369,
+   "lo": 3.464369,
+   "hi": 3.464369
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "depth_zone": "Medium_Deep",
+   "base": 4.0949,
+   "med": 6.582428,
+   "lo": 6.582428,
+   "hi": 6.582428
+  },
+  {
+   "phys_zone": "Northern_Terrace",
+   "depth_zone": "Shallow",
+   "base": 1.03485,
+   "med": 2.26384,
+   "lo": 2.26384,
+   "hi": 2.26384
+  }
+ ],
+ "national": [
+  {
+   "contaminant": "As",
+   "ssp": "ssp245",
+   "pct": 51.564141,
+   "lo": 31.89301,
+   "hi": 62.014193
+  },
+  {
+   "contaminant": "As",
+   "ssp": "ssp585",
+   "pct": 74.037784,
+   "lo": 57.276295,
+   "hi": 85.026093
+  },
+  {
+   "contaminant": "Mn2+",
+   "ssp": "ssp245",
+   "pct": -6.637781,
+   "lo": -11.254653,
+   "hi": 2.052998
+  },
+  {
+   "contaminant": "Mn2+",
+   "ssp": "ssp585",
+   "pct": -6.63229,
+   "lo": -11.486966,
+   "hi": 0.772998
+  },
+  {
+   "contaminant": "Fe2+",
+   "ssp": "ssp245",
+   "pct": 7.478352,
+   "lo": 7.391193,
+   "hi": 7.642421
+  },
+  {
+   "contaminant": "Fe2+",
+   "ssp": "ssp585",
+   "pct": 12.157634,
+   "lo": 12.065985,
+   "hi": 12.297434
+  },
+  {
+   "contaminant": "Cr3+",
+   "ssp": "ssp245",
+   "pct": -7.729248,
+   "lo": -10.880523,
+   "hi": -1.7973
+  },
+  {
+   "contaminant": "Cr3+",
+   "ssp": "ssp585",
+   "pct": -9.693861,
+   "lo": -13.007451,
+   "hi": -4.639334
+  },
+  {
+   "contaminant": "NO3-",
+   "ssp": "ssp245",
+   "pct": 6.5,
+   "lo": 6.5,
+   "hi": 6.5
+  },
+  {
+   "contaminant": "NO3-",
+   "ssp": "ssp585",
+   "pct": 10.5,
+   "lo": 10.5,
+   "hi": 10.5
+  }
+ ],
+ "who": 10,
+ "cv": [
+  {
+   "ssp": "ssp245",
+   "mean": 12.0,
+   "std": 4.785067,
+   "cv": 0.398756,
+   "n": 5
+  },
+  {
+   "ssp": "ssp585",
+   "mean": 18.0,
+   "std": 4.437398,
+   "cv": 0.246522,
+   "n": 6
+  }
+ ]
+}

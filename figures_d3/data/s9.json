@@ -1,0 +1,100 @@
+{
+ "zone": [
+  {
+   "zone": "Barind_Tract",
+   "obs_med": 2.029535,
+   "pred_med": 2.596852,
+   "n": 174,
+   "abs_pct_err": 27.953095
+  },
+  {
+   "zone": "Brahmaputra_Floodplain",
+   "obs_med": 1.588905,
+   "pred_med": 3.189645,
+   "n": 207,
+   "abs_pct_err": 100.744851
+  },
+  {
+   "zone": "Eastern_Hills",
+   "obs_med": 0.884187,
+   "pred_med": 1.261501,
+   "n": 122,
+   "abs_pct_err": 42.673523
+  },
+  {
+   "zone": "GBM_Delta",
+   "obs_med": 2.846634,
+   "pred_med": 4.144245,
+   "n": 523,
+   "abs_pct_err": 45.584025
+  },
+  {
+   "zone": "Ganges_Floodplain",
+   "obs_med": 2.938398,
+   "pred_med": 5.881275,
+   "n": 228,
+   "abs_pct_err": 100.152457
+  },
+  {
+   "zone": "Meghna_Floodplain",
+   "obs_med": 2.58414,
+   "pred_med": 5.923642,
+   "n": 289,
+   "abs_pct_err": 129.230672
+  },
+  {
+   "zone": "Northern_Terrace",
+   "obs_med": 1.622853,
+   "pred_med": 1.728203,
+   "n": 130,
+   "abs_pct_err": 6.491632
+  }
+ ],
+ "cv": [
+  {
+   "scheme": "random_10fold",
+   "space": "HI",
+   "R2": -0.014226,
+   "RMSE": 7.692567,
+   "MAE": 3.835815,
+   "bias": 0.040847,
+   "spearman": 0.467491
+  },
+  {
+   "scheme": "random_10fold",
+   "space": "log10_HI",
+   "R2": -0.037854,
+   "RMSE": 0.528444,
+   "MAE": 0.388844,
+   "bias": 0.03688,
+   "spearman": 0.467491
+  },
+  {
+   "scheme": "spatial_block_0.5deg",
+   "space": "HI",
+   "R2": -0.077751,
+   "RMSE": 7.929814,
+   "MAE": 4.632436,
+   "bias": -0.092903,
+   "spearman": 0.238984
+  },
+  {
+   "scheme": "spatial_block_0.5deg",
+   "space": "log10_HI",
+   "R2": -0.232061,
+   "RMSE": 0.575767,
+   "MAE": 0.460555,
+   "bias": 0.181805,
+   "spearman": 0.238984
+  },
+  {
+   "scheme": "zone_median_recovery_blockCV",
+   "space": "HI",
+   "R2": null,
+   "RMSE": null,
+   "MAE": 64.690036,
+   "bias": 70.582657,
+   "spearman": 0.87321
+  }
+ ]
+}
